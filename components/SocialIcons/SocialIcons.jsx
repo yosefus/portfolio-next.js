@@ -14,7 +14,7 @@ const Icons = styled.div`
   z-index: 3;
   bottom: 0;
   left: 2rem;
-  background: ${(props) => props.theme.body};
+  background: transparent;
   color: ${(props) => props.theme.text};
   font-size: 1.5rem;
 

@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { LanguageContext } from '../../pages/_app';
 
 const Links = styled.span`
+  text-transform: capitalize;
+
   @media (max-width: 480px) {
     a {
       font-size: 0.8rem;
@@ -16,7 +18,7 @@ const About = styled.div`
   position: absolute;
   top: 50%;
   right: 2rem;
-  transform: rotate(90deg); /* transform: translate(-50% 0); */
+  transform: rotate(90deg);
   text-decoration: none;
   z-index: 1;
 `;
@@ -26,9 +28,9 @@ const Photography = styled.div`
   position: absolute;
   top: 50%;
   left: 2rem;
-  transform: rotate(90deg); /* transform: translate(-50% 0); */
+  transform: rotate(90deg);
   text-decoration: none;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const Work = styled.div`
@@ -37,7 +39,7 @@ const Work = styled.div`
   bottom: 2rem;
   left: 33%;
   text-decoration: none;
-  z-index: 1;
+  z-index: 2;
 
   @media (max-width: 480px) {
     left: 20%;
@@ -51,6 +53,7 @@ const MySkills = styled.div`
   right: 33%;
   text-decoration: none;
   z-index: 1;
+
   @media (max-width: 480px) {
     right: 20%;
   }
@@ -64,19 +67,20 @@ const Text = {
     mySkills: 'הכישורים שלי',
   },
   en: {
-    about: 'about',
-    work: 'work',
-    photography: 'photography',
-    mySkills: 'my skills',
+    about: 'about .',
+    work: 'work .',
+    photography: 'photography .',
+    mySkills: 'my skills .',
   },
 };
 
-export default function HomeLinks() {
+export default function HomeLinks({ click }) {
   const [lang] = useContext(LanguageContext);
+
   return (
     <Links>
-      <Photography style={{ left: lang == 'he' ? '1.7rem' : '.1rem' }}>
-        <Link href="mySkills">
+      <Photography click={click} style={{ left: lang == 'he' ? '1.7rem' : '.1rem' }}>
+        <Link href="photography">
           <a>{Text[lang].photography}</a>
         </Link>
       </Photography>
@@ -90,7 +94,7 @@ export default function HomeLinks() {
           <a>{Text[lang].mySkills}</a>
         </Link>
       </MySkills>
-      <Work>
+      <Work click={click}>
         <Link href="work">
           <a>{Text[lang].work}</a>
         </Link>

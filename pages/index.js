@@ -1,10 +1,24 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import '../node_modules/normalize.css';
-import { MainContainer, Container } from '../styles/Home';
+import { MainContainer, Container, Center, DarkDiv } from '../styles/Home';
 import { HomeLinks } from './../components';
+import { GiYinYang } from 'react-icons/gi';
+import { useContext, useState } from 'react';
+import { LanguageContext } from '../pages/_app';
 
 export default function Home() {
+  const [lang] = useContext(LanguageContext);
+  const [click, setClick] = useState(false);
+
+  const Text = {
+    he: {
+      click: 'מה אתה לוחץ עלי?',
+    },
+    en: {
+      click: 'Click Me',
+    },
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -16,6 +30,13 @@ export default function Home() {
       <MainContainer>
         <Container>
           <HomeLinks />
+          <DarkDiv click={click}></DarkDiv>
+          <Center click={click} onClick={() => setClick(!click)}>
+            <h3>
+              <GiYinYang />
+            </h3>
+            <span>{Text[lang].click}</span>
+          </Center>
         </Container>
       </MainContainer>
     </div>

@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rotate = keyframes`
+0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(360deg);
+}
+`;
 
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -21,4 +30,50 @@ const Container = styled.div`
   padding: 2rem;
 `;
 
-export { MainContainer, Container };
+const Center = styled.button`
+  background: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: ${(props) => (props.click ? '85%' : '50%')};
+  left: ${(props) => (props.click ? '92%' : '50%')};
+  transform: translate(-50%, -50%);
+
+  transition: all ease 0.5s;
+
+  @media (max-width: 480px) {
+    left: ${(props) => (props.click ? '85%' : '50%')};
+  }
+
+  h3 {
+    font-size: ${(props) => (props.click ? '3rem' : '8rem')};
+  }
+
+  svg {
+    animation: ${rotate} infinite 2s linear;
+  }
+
+  span {
+    font-size: ${(props) => (props.click ? '0' : '1rem')};
+  }
+`;
+
+const DarkDiv = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  width: ${(props) => (props.click ? '50%' : '0')};
+  height: ${(props) => (props.click ? '100%' : '0')};
+  z-index: 1;
+  background: #000;
+  transition: height 0.5s ease, width 1s ease 0.5s;
+`;
+
+export { MainContainer, Container, Center, DarkDiv };

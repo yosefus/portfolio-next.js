@@ -16,12 +16,13 @@ const Icons = styled.div`
   z-index: 3;
   top: 0;
   right: 2rem;
-  background: ${(props) => props.theme.body};
+  background: transparent;
   color: ${(props) => props.theme.text};
   font-size: 1.5rem;
 
   p {
     margin: 0.5rem;
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {
