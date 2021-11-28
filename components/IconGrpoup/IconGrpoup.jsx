@@ -23,12 +23,32 @@ const Icons = styled.div`
   p {
     margin: 0.5rem;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+
+    p {
+      margin: 0.3rem 0;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
+  }
 `;
 
 const Line = styled.span`
   width: 2px;
   height: 8rem;
   background: ${(props) => props.theme.text};
+
+  @media (max-width: 480px) {
+    height: 6rem;
+  }
+
+  @media (max-height: 600px) {
+    height: 4rem;
+  }
 `;
 
 export default function IconGrpoup({ ThemeState }) {

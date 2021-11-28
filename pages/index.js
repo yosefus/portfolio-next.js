@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import '../node_modules/normalize.css';
 import { MainContainer, Container } from '../styles/Home';
-import { Logo, PowerButton } from './../components';
+import { HomeLinks } from './../components';
 
 export default function Home() {
   return (
@@ -15,8 +15,7 @@ export default function Home() {
 
       <MainContainer>
         <Container>
-          {/* <PowerButton /> */}
-          {/* <Logo /> */}
+          <HomeLinks />
         </Container>
       </MainContainer>
     </div>
