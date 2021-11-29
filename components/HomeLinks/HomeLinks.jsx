@@ -43,7 +43,7 @@ const Work = styled(motion.div)`
   z-index: 2;
 
   @media (max-width: 480px) {
-    left: 20%;
+    left: 18%;
   }
 `;
 
@@ -56,7 +56,7 @@ const MySkills = styled(motion.div)`
   z-index: 1;
 
   @media (max-width: 480px) {
-    right: 20%;
+    right: 18%;
   }
 `;
 
@@ -81,7 +81,7 @@ export default function HomeLinks({ click }) {
   return (
     <Links>
       <Photography
-        whileHover={{ fontWeight: 700 }}
+        whileHover={{ fontWeight: 700, fontSize: '20px' }}
         click={click}
         style={{ left: lang == 'he' ? '1.7rem' : '.1rem' }}
       >
@@ -89,17 +89,17 @@ export default function HomeLinks({ click }) {
           <a>{Text[lang].photography}</a>
         </Link>
       </Photography>
-      <About whileHover={{ fontWeight: 700 }}>
+      <About whileHover={{ fontWeight: 700, fontSize: '20px' }}>
         <Link href="/about">
           <a>{Text[lang].about}</a>
         </Link>
       </About>
-      <MySkills whileHover={{ fontWeight: 700, letterSpacing: '.1rem' }}>
+      <MySkills whileHover={{ fontWeight: 700, fontSize: '20px' }}>
         <Link href="/mySkills">
           <a>{Text[lang].mySkills}</a>
         </Link>
       </MySkills>
-      <Work whileHover={{ fontWeight: 700, letterSpacing: '.1rem' }} click={click}>
+      <Work whileHover={{ fontWeight: 700, fontSize: '20px' }} click={click}>
         <Link href="/work">
           <a>{Text[lang].work}</a>
         </Link>

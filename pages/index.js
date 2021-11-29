@@ -9,7 +9,7 @@ import { LanguageContext } from '../pages/_app';
 
 export default function Home() {
   const [lang] = useContext(LanguageContext);
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(0);
 
   const Text = {
     he: {
@@ -34,7 +34,7 @@ export default function Home() {
           <DarkDiv click={click} />
           {click && <Intro click={click} />}
 
-          <Center click={click} onClick={() => setClick(!click)}>
+          <Center click={click} onClick={() => setClick(click == 0 ? 1 : 0)}>
             <h3>
               <GiYinYang />
             </h3>
