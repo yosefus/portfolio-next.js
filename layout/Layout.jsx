@@ -1,13 +1,12 @@
 import React from 'react';
-import { IconGrpoup, Logo, PowerButton, SocialIcons } from '../components';
+import { ControlIcons, Logo, PowerButton } from '../components';
 
 export default function Layout({ children, ThemeState }) {
   return (
     <div>
       <PowerButton />
       <Logo />
-      <SocialIcons />
-      <IconGrpoup ThemeState={ThemeState} />
+      <ControlIcons ThemeState={ThemeState} />
       {children}
     </div>
   );

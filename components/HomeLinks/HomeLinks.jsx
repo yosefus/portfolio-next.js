@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { LanguageContext } from '../../pages/_app';
+import { motion } from 'framer-motion';
 
 const Links = styled.span`
   text-transform: capitalize;
@@ -13,7 +14,7 @@ const Links = styled.span`
   }
 `;
 
-const About = styled.div`
+const About = styled(motion.div)`
   color: ${(props) => props.theme.text};
   position: absolute;
   top: 50%;
@@ -23,8 +24,8 @@ const About = styled.div`
   z-index: 1;
 `;
 
-const Photography = styled.div`
-  color: ${(props) => props.theme.text};
+const Photography = styled(motion.div)`
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
   left: 2rem;
@@ -33,8 +34,8 @@ const Photography = styled.div`
   z-index: 2;
 `;
 
-const Work = styled.div`
-  color: ${(props) => props.theme.text};
+const Work = styled(motion.div)`
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   bottom: 2rem;
   left: 33%;
@@ -46,7 +47,7 @@ const Work = styled.div`
   }
 `;
 
-const MySkills = styled.div`
+const MySkills = styled(motion.div)`
   color: ${(props) => props.theme.text};
   position: absolute;
   bottom: 2rem;
@@ -79,23 +80,27 @@ export default function HomeLinks({ click }) {
 
   return (
     <Links>
-      <Photography click={click} style={{ left: lang == 'he' ? '1.7rem' : '.1rem' }}>
-        <Link href="photography">
+      <Photography
+        whileHover={{ fontWeight: 700 }}
+        click={click}
+        style={{ left: lang == 'he' ? '1.7rem' : '.1rem' }}
+      >
+        <Link href="/photography">
           <a>{Text[lang].photography}</a>
         </Link>
       </Photography>
-      <About>
-        <Link href="about">
+      <About whileHover={{ fontWeight: 700 }}>
+        <Link href="/about">
           <a>{Text[lang].about}</a>
         </Link>
       </About>
-      <MySkills>
-        <Link href="mySkills">
+      <MySkills whileHover={{ fontWeight: 700, letterSpacing: '.1rem' }}>
+        <Link href="/mySkills">
           <a>{Text[lang].mySkills}</a>
         </Link>
       </MySkills>
-      <Work click={click}>
-        <Link href="work">
+      <Work whileHover={{ fontWeight: 700, letterSpacing: '.1rem' }} click={click}>
+        <Link href="/work">
           <a>{Text[lang].work}</a>
         </Link>
       </Work>

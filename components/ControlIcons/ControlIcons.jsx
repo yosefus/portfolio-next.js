@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { MdLanguage } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 const Icons = styled.div`
   position: fixed;
@@ -52,28 +53,32 @@ const Line = styled.span`
   }
 `;
 
-export default function IconGrpoup({ ThemeState }) {
+export default function ControlIcons({ ThemeState }) {
   const [Theme, setTheme] = ThemeState;
   const [Language, setLanguage] = useContext(LanguageContext);
 
   return (
     <Icons>
       <Line />
-      <div>
+      <motion.div whileHover={{ scale: 1.7, rotate: '360deg' }} whileTap={{ scale: 0.9 }}>
         <Link href="mailto:yosalson@gmail.co">
           <a target="_blank">
             <AiOutlineMail />
           </a>
         </Link>
-      </div>
+      </motion.div>
       <div onClick={() => setLanguage(Language === 'he' ? 'en' : 'he')}>
-        <p>
+        <motion.p whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
           <MdLanguage />
-        </p>
-        <p>{Language === 'he' ? 'עב' : 'en'}</p>
+        </motion.p>
+        <motion.p whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
+          {Language === 'he' ? 'עב' : 'en'}
+        </motion.p>
       </div>
       <div onClick={() => setTheme(Theme == LightTheme ? DarkTheme : LightTheme)}>
-        <p>{Theme == LightTheme ? <BsFillSunFill /> : <BsFillMoonFill />}</p>
+        <motion.p whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
+          {Theme == LightTheme ? <BsFillSunFill /> : <BsFillMoonFill />}
+        </motion.p>
       </div>
     </Icons>
   );

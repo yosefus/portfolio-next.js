@@ -31,7 +31,7 @@ const Container = styled.div`
 `;
 
 const Center = styled.button`
-  background: ${(props) => props.theme.body};
+  background: transparent;
   color: ${(props) => props.theme.text};
   display: flex;
   flex-direction: column;
@@ -72,8 +72,16 @@ const DarkDiv = styled.div`
   width: ${(props) => (props.click ? '50%' : '0')};
   height: ${(props) => (props.click ? '100%' : '0')};
   z-index: 1;
-  background: #000;
+  background: ${(props) => props.theme.text};
   transition: height 0.5s ease, width 1s ease 0.5s;
+
+  /* @media (max-width: 480px) {
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    width: ${(props) => (props.click ? '100%' : '0')};
+    height: ${(props) => (props.click ? '50%' : '0')};
+  } */
 `;
 
 export { MainContainer, Container, Center, DarkDiv };

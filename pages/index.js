@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import '../node_modules/normalize.css';
 import { MainContainer, Container, Center, DarkDiv } from '../styles/Home';
-import { HomeLinks } from './../components';
+import { HomeLinks, SocialIcons, Intro } from './../components';
 import { GiYinYang } from 'react-icons/gi';
 import { useContext, useState } from 'react';
 import { LanguageContext } from '../pages/_app';
@@ -29,8 +29,11 @@ export default function Home() {
 
       <MainContainer>
         <Container>
-          <HomeLinks />
-          <DarkDiv click={click}></DarkDiv>
+          <HomeLinks click={click} />
+          <SocialIcons click={click} />
+          <DarkDiv click={click} />
+          {click && <Intro click={click} />}
+
           <Center click={click} onClick={() => setClick(!click)}>
             <h3>
               <GiYinYang />

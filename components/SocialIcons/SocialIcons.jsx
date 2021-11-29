@@ -5,6 +5,7 @@ import { BsFacebook } from 'react-icons/bs';
 import { SiShutterstock } from 'react-icons/si';
 import { FaLinkedinIn } from 'react-icons/fa';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Icons = styled.div`
   position: fixed;
@@ -15,7 +16,7 @@ const Icons = styled.div`
   bottom: 0;
   left: 2rem;
   background: transparent;
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   font-size: 1.5rem;
 
   & > *:not(:last-child) {
@@ -38,7 +39,7 @@ const Icons = styled.div`
 const Line = styled.span`
   width: 2px;
   height: 8rem;
-  background: ${(props) => props.theme.text};
+  background: ${(props) => (props.click ? props.theme.body : props.theme.text)};
 
   @media (max-width: 480px) {
     height: 6rem;
@@ -49,38 +50,38 @@ const Line = styled.span`
   }
 `;
 
-export default function SocialIcons() {
+export default function SocialIcons({ click }) {
   return (
-    <Icons>
-      <div>
+    <Icons click={click}>
+      <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
         <Link href="/">
           <a target="_blank">
             <AiFillGithub />
           </a>
         </Link>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
         <Link href="/">
           <a target="_blank">
             <SiShutterstock />
           </a>
         </Link>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
         <Link href="/">
           <a target="_blank">
             <BsFacebook />
           </a>
         </Link>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
         <Link href="/">
           <a target="_blank">
             <FaLinkedinIn />
           </a>
         </Link>
-      </div>
-      <Line />
+      </motion.div>
+      <Line click={click} />
     </Icons>
   );
 }
