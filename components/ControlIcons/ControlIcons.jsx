@@ -77,7 +77,7 @@ export default function ControlIcons({ ThemeState }) {
       </div>
       <div onClick={() => setTheme(Theme == LightTheme ? DarkTheme : LightTheme)}>
         <motion.p whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-          {Theme == LightTheme ? <BsFillSunFill /> : <BsFillMoonFill />}
+          {Theme !== LightTheme ? <BsFillSunFill /> : <BsFillMoonFill />}
         </motion.p>
       </div>
     </Icons>

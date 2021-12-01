@@ -1,10 +1,15 @@
 import React, { useContext } from 'react';
+import { LanguageContext } from './_app';
+// style and icons
 import styled from 'styled-components';
-
 import { FaLaptopCode } from 'react-icons/fa';
 import { BiPaint } from 'react-icons/bi';
-import { MdPhotoCamera } from 'react-icons/md';
-import { LanguageContext } from './_app';
+import lion from '../assets/Images/lion.jpg';
+import sheLion from '../assets/Images/sheLion.jpg';
+// components
+import { AboutBox } from '../components';
+import { motion } from 'framer-motion';
+import Particle from '../layout/Particle';
 
 const Container = styled.div`
   width: 100vw;
@@ -21,46 +26,13 @@ const Container = styled.div`
   }
 `;
 
-const Main = styled.div`
+const Back = styled(motion.span)`
+  z-index: 1;
   border: 2px solid ${(props) => props.theme.text};
-  color: ${(props) => props.theme.text};
-  background: transparent;
-  padding: 2rem;
-  width: 35vw;
-  min-height: 60vh;
-  z-index: 3;
-  line-height: 1.5;
-  font-family: ${(props) => (props.lang == 'he' ? 'M PLUS 1p' : 'Ubuntu Mono')}, monospace;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  backdrop-filter: blur(10px);
 
   @media (max-width: 1050px) {
     margin: 5vh 0;
-    width: 70vw;
-  }
-  @media (max-width: 480px) {
-    padding: 2rem 1.3rem;
-  }
-  @media (max-width: 320px) {
-    width: 65vw;
-  }
-`;
-
-const Title = styled.h2`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: calc(1rem + 1vw);
-`;
-
-const Descrition = styled.div`
-  color: ${(props) => props.theme.text};
-  font-size: calc(0.4rem + 1vw);
-  padding: 0.5rem 0;
-
-  @media (max-width: 480px) {
-    font-size: calc(0.6rem + 1vw);
   }
 `;
 
@@ -76,14 +48,17 @@ const Text = {
       'editing with Lightroom and Photoshop.',
       'Designing and building websites.',
     ],
-    designTools: 'Tools:',
-    designToolsList: ['Lightroom, Photoshop, Professional camera, Bootstrap 5, Material ui, css'],
-    developTitle: '',
-    developP: ' ',
-    developStrong: '',
-    developList: [''],
-    developTools: 'Tools:',
-    developToolsList: [''],
+    designTools: 'Knowledge:',
+    designToolsList: ['Lightroom, Photoshop, photography, Bootstrap 5, Material ui, css'],
+    developTitle: 'Frontend and Backend Developer.',
+    developP: 'I enjoy developing and creating complex and simple sites, from end to end',
+    developStrong: 'Back-end:',
+    developList: ['Creating routes and complex logic,', 'Node.js, Express, mongoDb'],
+    developTools: 'Front-end:',
+    developToolsList: [
+      'Build complex websites, including support for multiple languages.',
+      'html, css, js, React,  Next.js',
+    ],
   },
   he: {
     designTitle: 'מעצב אתרים, צלם וגרפיקאי',
@@ -96,82 +71,85 @@ const Text = {
       'עיצוב ובניית אתרים.',
     ],
 
-    designTools: 'כלים:',
-    designToolsList: ['מצלמה מקצועית, לייטרום, פוטושופ,', ' css, Bootstrap 5, Material ui'],
-    developTitle: '',
-    developP: ' ',
-    developStrong: '',
-    developList: [''],
-    developTools: 'כלים:',
-    developToolsList: [''],
+    designTools: 'ידע נרחב ב:',
+    designToolsList: ['צילום, לייטרום, פוטושופ,', ' css, Bootstrap 5, Material ui'],
+    developTitle: 'בונה אתרים, צד לקוח וצד שרת',
+    developP: 'אני נהנה לפתח וליצור אתרים מורכבים ופשוטים, מקצה לקצה ',
+    developStrong: 'Back-end',
+    developList: ['יצירת ראוטים ולוגיקה מורכבת,', 'node.js, express, mongoDb'],
+    developTools: 'Front-end',
+    developToolsList: ['בניית אתרים מורכבים, כולל תמיכה בשפות מרובות', 'html, css, js, React, Next.js'],
   },
 };
 
 export default function mySkills() {
-  const [lang] = useContext(LanguageContext);
-  const {
-    designTitle,
-    designP,
-    designStrong,
-    designList,
-    designTools,
-    designToolsList,
-    developTitle,
-    developP,
-    developStrong,
-    developList,
-    developTools,
-    developToolsList,
-  } = Text[lang];
+  const [lang] = useContext(LanguageContext),
+    {
+      designTitle,
+      designP,
+      designStrong,
+      designList,
+      designTools,
+      designToolsList,
+      developTitle,
+      developP,
+      developStrong,
+      developList,
+      developTools,
+      developToolsList,
+    } = Text[lang];
 
   return (
     <Container>
-      <Main lang={lang}>
-        <Title>
-          <BiPaint />
-          {designTitle}
-        </Title>
-        <Descrition>{designP}</Descrition>
-        <Descrition>
-          <strong>{designStrong}</strong>
-          <ul>
-            {designList.map((listText, i) => (
-              <li key={`k${i}`}>{listText}</li>
-            ))}
-          </ul>
-        </Descrition>
-        <Descrition>
-          <strong>{designTools}</strong>
-          <ul>
-            {designToolsList.map((listText, i) => (
-              <li key={`k${i}`}>{listText}</li>
-            ))}
-          </ul>
-        </Descrition>
-      </Main>
-      <Main lang={lang}>
-        <Title>
-          <FaLaptopCode />
-          {developTitle}
-        </Title>
-        <Descrition>{developP}</Descrition>
-        <Descrition>
-          <strong>{developStrong}</strong>
-          <ul>
-            {developList.map((listText, i) => (
-              <li key={`k${i}`}>{listText}</li>
-            ))}
-          </ul>
-        </Descrition>
-        <Descrition>
-          <strong>{developTools}</strong>
-          <ul>
-            {developToolsList.map((listText, i) => (
-              <li key={`k${i}`}>{listText}</li>
-            ))}
-          </ul>
-        </Descrition>
-      </Main>
+      <Back
+        whileHover={{
+          background: `url(${lion.src}), linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))`,
+          backgroundPosition: 'right',
+          backgroundSize: 'cover',
+          scale: 1.1,
+          borderRadius: '50%',
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ type: 'spring', duration: 1 }}
+      >
+        <AboutBox
+          lang={lang}
+          TitleText={designTitle}
+          p={designP}
+          strong={designStrong}
+          mainList={designList}
+          strong2={designTools}
+          secondList={designToolsList}
+          icon={<BiPaint />}
+        />
+      </Back>
+
+      <Back
+        whileHover={{
+          background: `url(${sheLion.src}), linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))`,
+          backgroundPosition: 'right',
+          backgroundSize: 'cover',
+          scale: 1.1,
+          borderRadius: '50%',
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ type: 'spring', duration: 1 }}
+      >
+        <AboutBox
+          lang={lang}
+          TitleText={developTitle}
+          p={developP}
+          strong={developStrong}
+          mainList={developList}
+          strong2={developTools}
+          secondList={developToolsList}
+          icon={<FaLaptopCode />}
+        />
+      </Back>
+
+      <Particle />
     </Container>
   );
 }

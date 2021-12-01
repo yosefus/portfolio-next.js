@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 
 const Links = styled.span`
   text-transform: capitalize;
-
   @media (max-width: 480px) {
     a {
       font-size: 0.8rem;

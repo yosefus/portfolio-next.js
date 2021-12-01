@@ -5,7 +5,7 @@ export default function Layout({ children, ThemeState }) {
   return (
     <div>
       <PowerButton />
-      <Logo />
+      {/* <Logo /> */}
       <ControlIcons ThemeState={ThemeState} />
       {children}
     </div>

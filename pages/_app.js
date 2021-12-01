@@ -6,10 +6,10 @@ import { LightTheme, DarkTheme } from './../components/Themes/Themes';
 export const LanguageContext = createContext();
 
 function MyApp({ Component, pageProps }) {
-  const LangState = useState('he'),
+  const LangState = useState('en'),
     [Language] = LangState;
 
-  const ThemeState = useState(DarkTheme),
+  const ThemeState = useState(LightTheme),
     [Theme] = ThemeState;
 
   return (

@@ -13,12 +13,13 @@ export default function Home() {
 
   const Text = {
     he: {
-      click: 'מה אתה לוחץ עלי?',
+      clickMe: 'מה אתה לוחץ עלי?',
     },
     en: {
-      click: 'Click Me',
+      clickMe: 'Click Me',
     },
   };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -32,13 +33,12 @@ export default function Home() {
           <HomeLinks click={click} />
           <SocialIcons click={click} />
           <DarkDiv click={click} />
-          {click && <Intro click={click} />}
-
+          {click ? <Intro click={click} /> : null}
           <Center click={click} onClick={() => setClick(click == 0 ? 1 : 0)}>
             <h3>
               <GiYinYang />
             </h3>
-            <span>{Text[lang].click}</span>
+            <span>{Text[lang].clickMe}</span>
           </Center>
         </Container>
       </MainContainer>

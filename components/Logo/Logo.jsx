@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CgYinyang } from 'react-icons/cg';
 
 const LogoH = styled.h3`
   display: inline-block;
@@ -10,6 +11,11 @@ const LogoH = styled.h3`
   z-index: 3;
   font-size: 2rem;
 `;
+
 export default function Logo() {
-  return <LogoH>logo</LogoH>;
+  return (
+    <LogoH>
+      <CgYinyang />
+    </LogoH>
+  );
 }
