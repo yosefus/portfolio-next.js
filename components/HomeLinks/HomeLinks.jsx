@@ -6,6 +6,11 @@ import { motion } from 'framer-motion';
 
 const Links = styled.span`
   text-transform: capitalize;
+
+  a {
+    font-size: 1.2rem;
+  }
+
   @media (max-width: 480px) {
     a {
       font-size: 0.8rem;
@@ -18,9 +23,11 @@ const About = styled(motion.div)`
   position: absolute;
   top: 50%;
   right: 2rem;
-  transform: rotate(90deg);
   text-decoration: none;
   z-index: 1;
+  p {
+    transform: rotate(270deg);
+  }
 `;
 
 const Photography = styled(motion.div)`
@@ -28,9 +35,15 @@ const Photography = styled(motion.div)`
   position: absolute;
   top: 50%;
   left: 2rem;
-  transform: rotate(90deg);
   text-decoration: none;
   z-index: 2;
+
+  p {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    transform: rotate(90deg);
+  }
 `;
 
 const Work = styled(motion.div)`
@@ -80,25 +93,44 @@ export default function HomeLinks({ click }) {
   return (
     <Links>
       <Photography
+        initial={{ x: -200, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        animate={{ x: 0, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
         whileHover={{ fontWeight: 700, fontSize: '20px' }}
         click={click}
         style={{ left: lang == 'he' ? '1.7rem' : '.1rem' }}
       >
         <Link href="/photography">
-          <a>{Text[lang].photography}</a>
+          <a>
+            <p>{Text[lang].photography}</p>
+          </a>
         </Link>
       </Photography>
-      <About whileHover={{ fontWeight: 700, fontSize: '20px' }}>
+      <About
+        initial={{ x: 200, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        animate={{ x: 0, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        whileHover={{ fontWeight: 700, fontSize: '20px' }}
+      >
         <Link href="/about">
-          <a>{Text[lang].about}</a>
+          <a>
+            <p>{Text[lang].about}</p>
+          </a>
         </Link>
       </About>
-      <MySkills whileHover={{ fontWeight: 700, fontSize: '20px' }}>
+      <MySkills
+        initial={{ y: 200, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        animate={{ y: 0, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        whileHover={{ fontWeight: 700, fontSize: '20px' }}
+      >
         <Link href="/mySkills">
           <a>{Text[lang].mySkills}</a>
         </Link>
       </MySkills>
-      <Work whileHover={{ fontWeight: 700, fontSize: '20px' }} click={click}>
+      <Work
+        initial={{ y: 200, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        animate={{ y: 0, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        whileHover={{ fontWeight: 700, fontSize: '20px' }}
+        click={click}
+      >
         <Link href="/work">
           <a>{Text[lang].work}</a>
         </Link>

@@ -10,6 +10,7 @@ import sheLion from '../assets/Images/sheLion.jpg';
 import { AboutBox } from '../components';
 import { motion } from 'framer-motion';
 import Particle from '../layout/Particle';
+import BigTitle from '../layout/BigTitle';
 
 const Container = styled.div`
   width: 100vw;
@@ -150,6 +151,7 @@ export default function mySkills() {
       </Back>
 
       <Particle />
+      <BigTitle text="my skills" top={'1rem'} left={'1rem'} />
     </Container>
   );
 }

@@ -3,9 +3,13 @@ import '../styles/globals.css';
 import React, { createContext, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { LightTheme, DarkTheme } from './../components/Themes/Themes';
+import { useRouter } from 'next/router';
+import { AnimatePresence } from 'framer-motion';
 export const LanguageContext = createContext();
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   const LangState = useState('en'),
     [Language] = LangState;
 
@@ -15,11 +19,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className={Language === 'he' ? 'font-he' : 'font-en'} dir={Language === 'he' ? 'rtl' : 'ltr'}>
       <ThemeProvider theme={Theme}>
-        <LanguageContext.Provider value={LangState}>
-          <Layout ThemeState={ThemeState}>
-            <Component {...pageProps} />
-          </Layout>
-        </LanguageContext.Provider>
+        <AnimatePresence exitBeforeEnter>
+          <LanguageContext.Provider value={LangState}>
+            <Layout router={router} location={router.pathname} ThemeState={ThemeState}>
+              <Component {...pageProps} />
+            </Layout>
+          </LanguageContext.Provider>
+        </AnimatePresence>
       </ThemeProvider>
     </div>
   );

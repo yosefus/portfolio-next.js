@@ -7,7 +7,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const Icons = styled.div`
+const Icons = styled(motion.div)`
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,18 @@ const Icons = styled.div`
     margin: 0.5rem 0;
   }
 
+  svg {
+    transition: all 0.2s ease-in-out;
+  }
+
+  a {
+    &:hover {
+      svg {
+        transform: scale(1.5) !important;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     font-size: 1.2rem;
 
@@ -36,7 +48,7 @@ const Icons = styled.div`
   }
 `;
 
-const Line = styled.span`
+const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
   background: ${(props) => (props.click ? props.theme.body : props.theme.text)};
@@ -52,30 +64,51 @@ const Line = styled.span`
 
 export default function SocialIcons({ click }) {
   return (
-    <Icons click={click}>
-      <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-        <Link href="/">
+    <Icons
+      initial={{ y: 300 }}
+      animate={{ y: 0 }}
+      transition={{ type: 'spring', duration: 1, delay: 0.8 }}
+      click={click}
+    >
+      <motion.div
+        initial={{ transform: 'scale(0)' }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: 'spring', delay: 1, duration: 1 }}
+      >
+        <Link href="https://github.com/yosefus?tab=repositories">
           <a target="_blank">
             <AiFillGithub />
           </a>
         </Link>
       </motion.div>
-      <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-        <Link href="/">
+      <motion.div
+        initial={{ transform: 'scale(0)' }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: 'spring', delay: 1.2, duration: 1 }}
+      >
+        <Link href="https://www.shutterstock.com/g/yosefus_flavius">
           <a target="_blank">
             <SiShutterstock />
           </a>
         </Link>
       </motion.div>
-      <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-        <Link href="/">
+      <motion.div
+        initial={{ transform: 'scale(0)' }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: 'spring', delay: 1.4, duration: 1 }}
+      >
+        <Link href="https://www.facebook.com/yosefus.flavius.1">
           <a target="_blank">
             <BsFacebook />
           </a>
         </Link>
       </motion.div>
-      <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-        <Link href="/">
+      <motion.div
+        initial={{ transform: 'scale(0)' }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: 'spring', delay: 1.6, duration: 1 }}
+      >
+        <Link href="https://www.linkedin.com/in/yosef-yaha-612694215/">
           <a target="_blank">
             <FaLinkedinIn />
           </a>

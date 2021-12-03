@@ -22,11 +22,12 @@ const Power = styled.button`
   z-index: 4;
   cursor: pointer;
   transition: all 0.2s ease-out;
+  box-shadow: 0px 2px 20px -3px rgba(0, 0, 0, 0.75);
 
   &:hover {
     background: ${(props) => props.theme.text};
     color: ${(props) => props.theme.body};
-    box-shadow: 0 0 8px 6px #26262694;
+    box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.75);
   }
 `;
 

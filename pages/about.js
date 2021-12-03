@@ -6,6 +6,7 @@ import Particle from '../layout/Particle';
 // style
 import Astro from '../assets/Images/spaceman.png';
 import styled, { keyframes } from 'styled-components';
+import BigTitle from '../layout/BigTitle';
 
 const Container = styled.div`
   width: 100vw;
@@ -132,6 +133,7 @@ export default function about() {
       <Spaceman whileTap={{ top: '-50vh' }} transition={{ type: 'spring', duration: 6 }}>
         <motion.img whileTap={{ scale: 0.3 }} transition={{ type: 'spring', duration: 2 }} src={Astro.src} />
       </Spaceman>
+      <BigTitle text="about" top={'1rem'} left={'5rem'} />
     </Container>
   );
 }

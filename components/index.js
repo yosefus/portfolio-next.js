@@ -6,3 +6,5 @@ export { default as ControlIcons } from './ControlIcons/ControlIcons';
 export { default as HomeLinks } from './HomeLinks/HomeLinks';
 export { default as Intro } from './Intro/Intro';
 export { default as AboutBox } from './AboutBox/AboutBox';
+export { default as WorkCard } from './WorkCard/WorkCard';
+export { default as SoundBar } from './SoundBar/SoundBar';
