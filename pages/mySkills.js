@@ -88,7 +88,7 @@ const cont = {
   show: { scale: 1, transition: { staggerChildren: 1, duration: 1 } },
 };
 
-export default function mySkills() {
+export default function MySkills() {
   const [lang] = useContext(LanguageContext),
     {
       designTitle,

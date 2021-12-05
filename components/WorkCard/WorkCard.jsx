@@ -131,10 +131,10 @@ export default function WorkCard({ workItem }) {
           animate={{ height: '100%' }}
           transition={{ type: 'spring', duration: 2 }}
         >
-          <a target="_blank" href={git_link}>
+          <a target="_blank" rel="noreferrer" href={git_link}>
             <BsGithub />
           </a>
-          <a target="_blank" href={web_link}>
+          <a target="_blank" rel="noreferrer" href={web_link}>
             <FaArrowRight />
           </a>
         </Overlay>

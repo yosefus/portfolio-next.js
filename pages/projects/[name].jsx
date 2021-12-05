@@ -22,7 +22,7 @@ import { WorkInProgress } from '../../components';
 //   };
 // };
 
-export default function project() {
+export default function Project() {
   const [Language] = useContext(LanguageContext);
 
   const router = useRouter();

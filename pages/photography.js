@@ -10,6 +10,6 @@ const Container = styled.div`
   background: ${(props) => props.theme.body};
 `;
 
-export default function photography() {
+export default function Photography() {
   return <WorkInProgress />;
 }

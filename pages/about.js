@@ -117,7 +117,7 @@ const cont = {
   show: { transform: 'translateX(0vw)', transition: { staggerChildren: 1, duration: 1 } },
 };
 
-export default function about() {
+export default function About() {
   const [lang] = useContext(LanguageContext),
     { a, b, c, d } = Text[lang];
   return (

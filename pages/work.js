@@ -61,7 +61,7 @@ const cont = {
   show: { opacity: 1, transition: { staggerChildren: 0.5, duration: 0.5 } },
 };
 
-export default function work() {
+export default function Work() {
   const ref = useRef(null);
   const yingYang = useRef(null);
 
