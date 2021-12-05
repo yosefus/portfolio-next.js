@@ -4,11 +4,13 @@ import { LanguageContext } from './../../pages/_app';
 import { motion } from 'framer-motion';
 // images
 import calcImg from '../../assets/Images/calc.png';
+import ticImg from '../../assets/Images/tic.png';
 import { BsGithub } from 'react-icons/bs';
 import { FaArrowRight } from 'react-icons/fa';
 
 const images = {
   calc: calcImg.src,
+  tic: ticImg.src,
 };
 
 const Box = styled(motion.li)`
@@ -39,7 +41,7 @@ const Box = styled(motion.li)`
   }
 
   span {
-    margin: 0 3px;
+    margin: 1px 3px;
     padding: 2px 5px;
     text-align: center;
     border: 1px solid ${(props) => props.theme.body};

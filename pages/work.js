@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
-import styled from 'styled-components';
 import { WorkCard } from '../components';
-import { CgYinyang } from 'react-icons/cg';
 import WorkArr from '../data/work-data';
 import BigTitle from '../layout/BigTitle';
+// style
+import { CgYinyang } from 'react-icons/cg';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Container = styled.div`
@@ -80,6 +81,7 @@ export default function work() {
   return (
     <Container>
       <BigTitle text="My Work" top={`10%`} left={`10%`} />
+
       <Main variants={cont} initial="hidden" animate="show" ref={ref}>
         {WorkArr.map((workItem, i) => (
           <WorkCard key={`key${i}`} workItem={workItem} />

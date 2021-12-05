@@ -34,7 +34,7 @@ const Photography = styled(motion.div)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
-  left: 2rem;
+  left: 1.8rem;
   text-decoration: none;
   z-index: 2;
 
@@ -95,9 +95,9 @@ export default function HomeLinks({ click }) {
       <Photography
         initial={{ x: -200, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
         animate={{ x: 0, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
-        whileHover={{ fontWeight: 700, fontSize: '20px' }}
+        whileHover={{ fontWeight: 700, scale: 1.2 }}
         click={click}
-        style={{ left: lang == 'he' ? '1.7rem' : '.1rem' }}
+        style={{ left: lang == 'he' ? '1.7rem' : '0rem' }}
       >
         <Link href="/photography">
           <a>
@@ -108,7 +108,7 @@ export default function HomeLinks({ click }) {
       <About
         initial={{ x: 200, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
         animate={{ x: 0, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
-        whileHover={{ fontWeight: 700, fontSize: '20px' }}
+        whileHover={{ fontWeight: 700, scale: 1.2 }}
       >
         <Link href="/about">
           <a>
@@ -119,7 +119,7 @@ export default function HomeLinks({ click }) {
       <MySkills
         initial={{ y: 200, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
         animate={{ y: 0, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
-        whileHover={{ fontWeight: 700, fontSize: '20px' }}
+        whileHover={{ fontWeight: 700, scale: 1.2 }}
       >
         <Link href="/mySkills">
           <a>{Text[lang].mySkills}</a>
@@ -128,7 +128,7 @@ export default function HomeLinks({ click }) {
       <Work
         initial={{ y: 200, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
         animate={{ y: 0, transition: { type: 'spring', duration: 1.5, delay: 1 } }}
-        whileHover={{ fontWeight: 700, fontSize: '20px' }}
+        whileHover={{ fontWeight: 700, scale: 1.2 }}
         click={click}
       >
         <Link href="/work">

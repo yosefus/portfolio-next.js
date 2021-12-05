@@ -22,7 +22,7 @@ const Container = styled.div`
   }
 `;
 
-const Main = styled.div`
+const Main = styled(motion.div)`
   color: ${(props) => props.theme.text};
   border: 2px solid ${(props) => props.theme.text};
   background: transparent;
@@ -91,9 +91,9 @@ const Spaceman = styled(motion.div)`
   @media (max-width: 600px) {
     left: 5%;
 
-    img {
+    /* img {
       transform: scaleX(-1);
-    }
+    } */
   }
 `;
 
@@ -112,13 +112,18 @@ const Text = {
   },
 };
 
+const cont = {
+  hidden: { transform: 'translateX(-70vw)' },
+  show: { transform: 'translateX(0vw)', transition: { staggerChildren: 1, duration: 1 } },
+};
+
 export default function about() {
   const [lang] = useContext(LanguageContext),
     { a, b, c, d } = Text[lang];
   return (
     <Container>
       <Particle about={1} />
-      <Main lang={lang}>
+      <Main variants={cont} initial="hidden" animate="show" lang={lang}>
         {a}
         <br />
         <br />

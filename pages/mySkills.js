@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 import Particle from '../layout/Particle';
 import BigTitle from '../layout/BigTitle';
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   width: 100vw;
   min-height: 100vh;
   background: ${(props) => props.theme.body};
@@ -83,6 +83,11 @@ const Text = {
   },
 };
 
+const cont = {
+  hidden: { scale: 1.3 },
+  show: { scale: 1, transition: { staggerChildren: 1, duration: 1 } },
+};
+
 export default function mySkills() {
   const [lang] = useContext(LanguageContext),
     {
@@ -101,7 +106,7 @@ export default function mySkills() {
     } = Text[lang];
 
   return (
-    <Container>
+    <Container variants={cont} initial="hidden" animate="show">
       <Back
         whileHover={{
           background: `url(${lion.src}), linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))`,
@@ -151,7 +156,7 @@ export default function mySkills() {
       </Back>
 
       <Particle />
-      <BigTitle text="my skills" top={'1rem'} left={'1rem'} />
+      <BigTitle text="my skills" top={'.1rem'} left={'1rem'} />
     </Container>
   );
 }

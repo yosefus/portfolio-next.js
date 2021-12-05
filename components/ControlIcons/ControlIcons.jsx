@@ -9,7 +9,7 @@ import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { MdLanguage } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
-const Icons = styled.div`
+const Icons = styled(motion.div)`
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -22,8 +22,12 @@ const Icons = styled.div`
   font-size: 1.5rem;
 
   p {
-    margin: 0.5rem;
+    margin: 0.3rem;
     cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   @media (max-width: 768px) {
@@ -58,28 +62,48 @@ export default function ControlIcons({ ThemeState }) {
   const [Language, setLanguage] = useContext(LanguageContext);
 
   return (
-    <Icons>
+    <Icons initial={{ y: -300 }} animate={{ y: 0 }} transition={{ type: 'spring', duration: 1, delay: 0.8 }}>
       <Line />
-      <motion.div whileHover={{ scale: 1.7, rotate: '360deg' }} whileTap={{ scale: 0.9 }}>
-        <Link href="mailto:yosalson@gmail.co">
+      <motion.div
+        initial={{ transform: 'scale(0)', transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        animate={{ scale: [0, 1, 1.5, 1], transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        whileHover={{ scale: 1.7, rotate: '360deg' }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <Link href="mailto:yosefus741@gmail.com">
           <a target="_blank">
             <AiOutlineMail />
           </a>
         </Link>
       </motion.div>
-      <div onClick={() => setLanguage(Language === 'he' ? 'en' : 'he')}>
-        <motion.p whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
+
+      <motion.div
+        whileHover={{ rotate: 360 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setLanguage(Language === 'he' ? 'en' : 'he')}
+      >
+        <motion.p
+          initial={{ transform: 'scale(0)', transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+          animate={{ scale: [0, 1, 1.5, 1], transition: { type: 'spring', duration: 1.5, delay: 1.2 } }}
+        >
           <MdLanguage />
         </motion.p>
-        <motion.p whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
-          {Language === 'he' ? 'עב' : 'en'}
+        <motion.p
+          initial={{ transform: 'scale(0)', transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+          animate={{ scale: [0, 1, 1.5, 1], transition: { type: 'spring', duration: 1.5, delay: 1.4 } }}
+        >
+          {Language === 'he' ? 'en' : 'עב'}
         </motion.p>
-      </div>
-      <div onClick={() => setTheme(Theme == LightTheme ? DarkTheme : LightTheme)}>
+      </motion.div>
+      <motion.div
+        initial={{ transform: 'scale(0)', transition: { type: 'spring', duration: 1.5, delay: 1 } }}
+        animate={{ scale: [0, 1, 1.5, 1], transition: { type: 'spring', duration: 1.5, delay: 1.6 } }}
+        onClick={() => setTheme(Theme == LightTheme ? DarkTheme : LightTheme)}
+      >
         <motion.p whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}>
           {Theme !== LightTheme ? <BsFillSunFill /> : <BsFillMoonFill />}
         </motion.p>
-      </div>
+      </motion.div>
     </Icons>
   );
 }

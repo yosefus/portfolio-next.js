@@ -8,7 +8,7 @@ const Main = styled.div`
   width: 35vw;
   min-height: 68vh;
   z-index: 3;
-  line-height: 1.5;
+  line-height: 1.3;
   font-family: ${(props) => (props.lang == 'he' ? 'M PLUS 1p' : 'Ubuntu Mono')}, monospace;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ const Title = styled.h2`
   }
 
   ${Main}:hover & {
-    text-shadow: 4px 3px 2px #000;
+    text-shadow: -3px 6px 7px #000;
     flex-direction: column;
 
     svg {

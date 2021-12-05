@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import { useRouter } from 'next/router';
-import { projectsObj } from '../../projects/projectObj';
 import { LanguageContext } from '../_app';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { WorkInProgress } from '../../components';
+
 // export const getStaticPaths = () => {
 //   const paths = projects.map((p) => {
 //     return { params: { name: p.name.toString() } };
@@ -25,15 +28,11 @@ export default function project() {
   const router = useRouter();
   const { name } = router.query;
 
-  let current = projectsObj[name];
+  // let current = projectsObj[name];
 
   return (
     <>
-      {current && (
-        <div>
-          <h1>{current.name[Language]}</h1>
-        </div>
-      )}
+      <WorkInProgress />
     </>
   );
 }

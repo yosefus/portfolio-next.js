@@ -20,7 +20,7 @@ const Icons = styled(motion.div)`
   font-size: 1.5rem;
 
   & > *:not(:last-child) {
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
   }
 
   svg {
@@ -50,11 +50,11 @@ const Icons = styled(motion.div)`
 
 const Line = styled(motion.span)`
   width: 2px;
-  height: 8rem;
+  height: 6rem;
   background: ${(props) => (props.click ? props.theme.body : props.theme.text)};
 
   @media (max-width: 480px) {
-    height: 6rem;
+    height: 5rem;
   }
 
   @media (max-height: 600px) {

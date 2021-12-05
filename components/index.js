@@ -1,5 +1,4 @@
 export { default as PowerButton } from './PowerButton/PowerButton';
-export { default as AllSvg } from './AllSvg/AllSvg';
 export { default as Logo } from './Logo/Logo';
 export { default as SocialIcons } from './SocialIcons/SocialIcons';
 export { default as ControlIcons } from './ControlIcons/ControlIcons';
@@ -8,3 +7,4 @@ export { default as Intro } from './Intro/Intro';
 export { default as AboutBox } from './AboutBox/AboutBox';
 export { default as WorkCard } from './WorkCard/WorkCard';
 export { default as SoundBar } from './SoundBar/SoundBar';
+export { default as WorkInProgress } from './WorkInProgress/WorkInProgress';
