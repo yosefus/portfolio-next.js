@@ -58,7 +58,7 @@ const Text = {
     developTools: 'Front-end:',
     developToolsList: [
       'Build complex websites, including support for multiple languages.',
-      'html, css, js, React,  Next.js',
+      'html, css, js, React (State management, hooks), Next.js',
     ],
   },
   he: {
@@ -79,7 +79,10 @@ const Text = {
     developStrong: 'Back-end',
     developList: ['יצירת ראוטים ולוגיקה מורכבת,', 'node.js, express, mongoDb'],
     developTools: 'Front-end',
-    developToolsList: ['בניית אתרים מורכבים, כולל תמיכה בשפות מרובות', 'html, css, js, React, Next.js'],
+    developToolsList: [
+      'בניית אתרים מורכבים, כולל תמיכה בשפות מרובות',
+      'html, css, js, React(כולל ניהול סטייטים גלובליים, hooks), Next.js',
+    ],
   },
 };
 

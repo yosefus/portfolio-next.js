@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import me from '../../assets/Images/profile-img.png';
+import me from '../../assets/Images/profile.png';
+import me2 from '../../assets/Images/profile2.png';
 import { LanguageContext } from '../../pages/_app';
 import { motion } from 'framer-motion';
 
@@ -57,6 +58,8 @@ const TextBox = styled.div`
     h6,
     h1 {
       margin-bottom: 5px;
+      z-index: 3;
+      text-shadow: ${(props) => `3px 3px 8px ${props.theme.text}`};
     }
   }
 
@@ -81,7 +84,12 @@ const SubBox = styled.div`
 
   @media (max-width: 480px) {
     .pic {
-      width: 80vw;
+      content: ${`url( ${me2.src})`};
+      left: 120%;
+
+      /* bottom: -20px; */
+      width: 100vw;
+      z-index: 1;
     }
   }
 `;
@@ -102,6 +110,7 @@ const Text = {
 export default function Intro({ color }) {
   const [lang] = useContext(LanguageContext);
   const { head, main, p } = Text[lang];
+
   return (
     <Box
       initial={{ height: 0 }}

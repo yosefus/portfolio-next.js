@@ -22,9 +22,9 @@ const About = styled(motion.div)`
   color: ${(props) => props.theme.text};
   position: absolute;
   top: 50%;
-  right: 2rem;
+  right: 1.7rem;
   text-decoration: none;
-  z-index: 1;
+  z-index: 10;
   p {
     transform: rotate(270deg);
   }

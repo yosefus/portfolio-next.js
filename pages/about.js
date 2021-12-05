@@ -4,7 +4,7 @@ import { LanguageContext } from './_app';
 import { motion } from 'framer-motion';
 import Particle from '../layout/Particle';
 // style
-import Astro from '../assets/Images/spaceman.png';
+import Astro from '../assets/Images/s.png';
 import styled, { keyframes } from 'styled-components';
 import BigTitle from '../layout/BigTitle';
 
@@ -89,6 +89,7 @@ const Spaceman = styled(motion.div)`
   }
 
   @media (max-width: 600px) {
+    top: 70vh;
     left: 5%;
 
     /* img {
