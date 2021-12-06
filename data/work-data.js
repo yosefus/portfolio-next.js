@@ -35,6 +35,24 @@ const arrWork = [
     git_link: 'https://github.com/yosefus/tic-tac-toe-react',
     img_path: 'tic',
   },
+  {
+    name: 'tic-tac-toe-js',
+    he: {
+      title: 'איקס עיגול - js',
+      description: 'משחק מעוצב של איקס עיגול',
+      note: 'בנייה של קוד נקי בגאווה סקריפט טהור',
+    },
+    en: {
+      title: 'pure js tic tac toe',
+      description: 'A simple game of tic tac toe with only js html css',
+      note: 'Includes additions of adding player names, back step back and game reset',
+    },
+    tec: ['html', 'css', 'js'],
+    sort_path: ['frontend'],
+    web_link: 'https://tic-tac-toe-pure-js-yosefus.netlify.app',
+    git_link: 'https://github.com/yosefus/tic-tac-toe--pure-JavaScript',
+    img_path: 'ticjs',
+  },
 ];
 
 export default arrWork;

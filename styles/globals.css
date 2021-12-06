@@ -9,6 +9,18 @@ body {
   overflow-x: hidden;
 }
 
+/* added */
+body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+/* added */
+
 .font-he {
   font-family: 'Assistant', sans-serif;
 }

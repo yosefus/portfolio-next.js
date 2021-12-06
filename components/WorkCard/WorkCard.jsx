@@ -1,16 +1,21 @@
 import React, { useContext, useState } from 'react';
-import styled from 'styled-components';
 import { LanguageContext } from './../../pages/_app';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
+
 // images
 import calcImg from '../../assets/Images/calc.png';
 import ticImg from '../../assets/Images/tic.png';
+import ticJsImg from '../../assets/Images/ticjs.png';
+
+// icons
 import { BsGithub } from 'react-icons/bs';
 import { FaArrowRight } from 'react-icons/fa';
 
 const images = {
   calc: calcImg.src,
   tic: ticImg.src,
+  ticjs: ticJsImg.src,
 };
 
 const Box = styled(motion.li)`
