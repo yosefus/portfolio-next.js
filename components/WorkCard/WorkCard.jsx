@@ -3,6 +3,7 @@ import { LanguageContext } from './../../pages/_app';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 // images
 import calcImg from '../../assets/Images/calc.png';
 import ticImg from '../../assets/Images/tic.png';
@@ -160,8 +161,8 @@ export default function WorkCard({ workItem }) {
 
   return (
     <Box
+      onClick={() => setShowOverlay(!showOverlay)}
       variants={item}
-      onTap={() => setShowOverlay(!showOverlay)}
       onMouseEnter={() => setShowOverlay(true)}
       onMouseLeave={() => setShowOverlay(false)}
     >
@@ -173,10 +174,11 @@ export default function WorkCard({ workItem }) {
           transition={{ type: 'spring', duration: 2 }}
         >
           <Image src={images[img_path]} layout="fill" className="layout-img" objectFit="cover" />
-          <a target="_blank" rel="noreferrer" href={git_link}>
+
+          <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={git_link}>
             <BsGithub />
           </a>
-          <a target="_blank" rel="noreferrer" href={web_link}>
+          <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
             <FaArrowRight />
           </a>
         </Overlay>
