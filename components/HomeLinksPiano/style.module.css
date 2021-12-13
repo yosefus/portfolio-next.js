@@ -1,0 +1,23 @@
+.first {
+  grid-row: 1 / span 10;
+}
+.second {
+  grid-row: 11 / span 10;
+}
+.third {
+  grid-row: 21 / span 10;
+}
+.forth {
+  grid-row: 31 / span 10;
+}
+
+.littleKey {
+  z-index: 40;
+  background: #000;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.littleKey:hover {
+  background: linear-gradient(to right, #000, #3d3d3d);
+}

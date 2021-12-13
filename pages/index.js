@@ -1,14 +1,16 @@
 import Head from 'next/head';
 import '../node_modules/normalize.css';
 import { MainContainer, Container, Center, DarkDiv } from '../styles/Home';
-import { HomeLinks, SocialIcons, Intro } from './../components';
+import { HomeLinks, SocialIcons, Intro, HomeLinksPiano } from './../components';
 import { GiYinYang } from 'react-icons/gi';
 import { useContext, useState } from 'react';
 import { LanguageContext } from '../pages/_app';
+import { BurgerBtn } from '../components';
 
 export default function Home() {
   const [lang] = useContext(LanguageContext);
-  const [click, setClick] = useState(0);
+  const [clickCenter, setClickCenter] = useState(0);
+  const [burgerClick, setburgerClick] = useState(0);
 
   const Text = {
     he: {
@@ -17,6 +19,24 @@ export default function Home() {
     en: {
       clickMe: 'Click Me',
     },
+  };
+
+  const onClickBurger = () => {
+    if (burgerClick == 0) {
+      setburgerClick(1);
+      setClickCenter(0);
+    } else {
+      setburgerClick(0);
+    }
+  };
+
+  const onClickCenter = () => {
+    if (clickCenter == 0) {
+      setburgerClick(0);
+      setClickCenter(1);
+    } else {
+      setClickCenter(0);
+    }
   };
 
   return (
@@ -29,11 +49,20 @@ export default function Home() {
 
       <MainContainer>
         <Container>
-          <HomeLinks click={click} />
-          <SocialIcons click={click} />
-          <DarkDiv click={click} />
-          {click ? <Intro click={click} /> : null}
-          <Center click={click} onClick={() => setClick(click == 0 ? 1 : 0)}>
+          <BurgerBtn click={clickCenter} onClickBurger={onClickBurger} />
+
+          <HomeLinksPiano click={clickCenter} burgerclick={burgerClick} />
+          {!clickCenter && burgerClick ? null : null}
+
+          {/* <HomeLinks click={click} /> */}
+
+          <SocialIcons click={clickCenter} />
+
+          <DarkDiv click={clickCenter} />
+
+          {clickCenter ? <Intro click={clickCenter} /> : null}
+
+          <Center click={clickCenter} onClick={onClickCenter}>
             <h3>
               <GiYinYang />
             </h3>
