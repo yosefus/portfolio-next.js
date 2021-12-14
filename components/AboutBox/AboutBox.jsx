@@ -1,6 +1,43 @@
 import React from 'react';
 import { Descrition, Main, Title, Icons } from './style';
 
+// icons
+import { BsGithub, BsFillBootstrapFill } from 'react-icons/bs';
+import { MdAnimation } from 'react-icons/md';
+import { AiFillHtml5, AiFillCamera } from 'react-icons/ai';
+import { DiCss3, DiReact, DiSass, DiJavascript1, DiPhotoshop } from 'react-icons/di';
+import {
+  SiNextdotjs,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiAdobelightroom,
+  SiShutterstock,
+} from 'react-icons/si';
+
+const icons = {
+  iconsDev: [
+    <AiFillHtml5 />,
+    <DiReact />,
+    <SiNextdotjs />,
+    <SiNodedotjs />,
+    <SiMongodb />,
+    <SiExpress />,
+    <DiJavascript1 />,
+    <BsFillBootstrapFill />,
+    <BsGithub />,
+  ],
+
+  iconsArt: [
+    <DiSass />,
+    <MdAnimation />,
+    <DiCss3 />,
+    <AiFillCamera />,
+    <DiPhotoshop />,
+    <SiAdobelightroom />,
+    <SiShutterstock />,
+  ],
+};
 export default function AboutBox({
   lang,
   TitleText,
@@ -19,7 +56,11 @@ export default function AboutBox({
         {icon}
         {TitleText}
       </Title>
-      <Icons>{iconList && iconList.map((item, i) => <span key={`rrr${i}`}>{item}</span>)}</Icons>
+      <Icons>
+        {icons[iconList].map((item, i) => (
+          <span key={`rrr${i}`}>{item}</span>
+        ))}
+      </Icons>
       <Descrition>{p}</Descrition>
       <Descrition>
         <strong>{strong}</strong>
