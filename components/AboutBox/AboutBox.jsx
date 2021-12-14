@@ -19,7 +19,7 @@ export default function AboutBox({
         {icon}
         {TitleText}
       </Title>
-      <Icons>{iconList && iconList.map((item, i) => <span key={i}>{item}</span>)}</Icons>
+      <Icons>{iconList && iconList.map((item, i) => <span key={`rrr${i}`}>{item}</span>)}</Icons>
       <Descrition>{p}</Descrition>
       <Descrition>
         <strong>{strong}</strong>
