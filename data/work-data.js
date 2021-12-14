@@ -53,6 +53,24 @@ const arrWork = [
     git_link: 'https://github.com/yosefus/tic-tac-toe--pure-JavaScript',
     img_path: 'ticjs',
   },
+  {
+    name: 'Countries-next.js',
+    he: {
+      title: 'מדינות בnext.js',
+      description: 'מידע על מדינות, כולל חיפוש מדינה ודף מידע לכל מדינה בנפרד',
+      note: 'משתמש בsaas, וnext.js, וframer-motion ליצירת אנימציות רספונסיבי מלא ',
+    },
+    en: {
+      title: 'Countries info next.js',
+      description: 'Country information, including country search and country-specific information sheet',
+      note: 'Uses saas, and next.js, and framer-motion to create animations, fully responsive',
+    },
+    tec: ['html', 'sass', 'next', 'animation'],
+    sort_path: ['frontend'],
+    web_link: 'https://countries-next-yosefus.netlify.app',
+    git_link: 'https://github.com/yosefus/countries-api-next',
+    img_path: 'country',
+  },
 ];
 
 export default arrWork;

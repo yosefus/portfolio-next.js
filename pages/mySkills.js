@@ -12,6 +12,42 @@ import { motion } from 'framer-motion';
 import Particle from '../layout/Particle';
 import BigTitle from '../layout/BigTitle';
 
+// icons
+import { BsGithub, BsFillBootstrapFill } from 'react-icons/bs';
+import { MdAnimation } from 'react-icons/md';
+import { AiFillHtml5, AiFillCamera } from 'react-icons/ai';
+import { DiCss3, DiReact, DiSass, DiJavascript1, DiPhotoshop } from 'react-icons/di';
+import {
+  SiNextdotjs,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiAdobelightroom,
+  SiShutterstock,
+} from 'react-icons/si';
+
+const iconsDev = [
+  <AiFillHtml5 />,
+  <DiReact />,
+  <SiNextdotjs />,
+  <SiNodedotjs />,
+  <SiMongodb />,
+  <SiExpress />,
+  <DiJavascript1 />,
+  <BsFillBootstrapFill />,
+  <BsGithub />,
+];
+
+const iconsArt = [
+  <DiSass />,
+  <MdAnimation />,
+  <DiCss3 />,
+  <AiFillCamera />,
+  <DiPhotoshop />,
+  <SiAdobelightroom />,
+  <SiShutterstock />,
+];
+
 const Container = styled(motion.div)`
   width: 100vw;
   min-height: 100vh;
@@ -120,7 +156,7 @@ export default function MySkills() {
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ type: 'spring', duration: 1 }}
+        transition={{ type: 'spring', duration: 0.5 }}
       >
         <AboutBox
           lang={lang}
@@ -131,6 +167,7 @@ export default function MySkills() {
           strong2={designTools}
           secondList={designToolsList}
           icon={<BiPaint />}
+          iconList={iconsArt}
         />
       </Back>
 
@@ -144,7 +181,7 @@ export default function MySkills() {
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ type: 'spring', duration: 1 }}
+        transition={{ type: 'spring', duration: 0.5 }}
       >
         <AboutBox
           lang={lang}
@@ -154,6 +191,7 @@ export default function MySkills() {
           mainList={developList}
           strong2={developTools}
           secondList={developToolsList}
+          iconList={iconsDev}
           icon={<FaLaptopCode />}
         />
       </Back>

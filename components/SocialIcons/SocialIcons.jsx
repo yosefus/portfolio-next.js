@@ -1,66 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
+// style
+import { Icons, Line } from './style';
+// icons
 import { AiFillGithub } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
 import { SiShutterstock } from 'react-icons/si';
 import { FaLinkedinIn } from 'react-icons/fa';
-import styled from 'styled-components';
+// animation
 import { motion } from 'framer-motion';
-
-const Icons = styled(motion.div)`
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 3;
-  bottom: 0;
-  left: 2rem;
-  background: transparent;
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
-  font-size: 1.5rem;
-
-  & > *:not(:last-child) {
-    margin: 0.4rem 0;
-  }
-
-  svg {
-    transition: all 0.2s ease-in-out;
-  }
-
-  a {
-    &:hover {
-      svg {
-        transform: scale(1.5) !important;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-
-    & > *:not(:last-child) {
-      margin: 0.3rem 0;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 1rem;
-    }
-  }
-`;
-
-const Line = styled(motion.span)`
-  width: 2px;
-  height: 6rem;
-  background: ${(props) => (props.click ? props.theme.body : props.theme.text)};
-
-  @media (max-width: 480px) {
-    height: 5rem;
-  }
-
-  @media (max-height: 600px) {
-    height: 4rem;
-  }
-`;
 
 export default function SocialIcons({ click }) {
   return (

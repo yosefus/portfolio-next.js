@@ -11,10 +11,6 @@ const Container = styled.div`
   width: 100vw;
   height: 400vh;
   background: ${(props) => props.theme.body};
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  /* overflow: hidden; */
   position: relative;
 `;
 

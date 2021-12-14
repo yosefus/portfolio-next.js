@@ -88,6 +88,7 @@ const TextBox = styled.div`
 
     .linkPort {
       margin: auto;
+      font-size: 0.9rem;
       span {
         opacity: 0.8;
       }
