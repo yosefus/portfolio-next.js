@@ -38,6 +38,7 @@ const icons = {
     <SiShutterstock />,
   ],
 };
+
 export default function AboutBox({
   lang,
   TitleText,
@@ -56,11 +57,11 @@ export default function AboutBox({
         {icon}
         {TitleText}
       </Title>
-      <Icons>
-        {icons[iconList].map((item, i) => (
-          <span key={`rrr${i}`}>{item}</span>
+      {/* <Icons>
+        {icons[iconList].map((item, index) => (
+          <span key={`rrr${index}`}>{item}</span>
         ))}
-      </Icons>
+      </Icons> */}
       <Descrition>{p}</Descrition>
       <Descrition>
         <strong>{strong}</strong>
@@ -74,7 +75,7 @@ export default function AboutBox({
         <strong>{strong2}</strong>
         <ul>
           {secondList.map((listText, i) => (
-            <li key={`k${i}`}>{listText}</li>
+            <li key={`ddd${i}`}>{listText}</li>
           ))}
         </ul>
       </Descrition>
