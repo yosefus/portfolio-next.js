@@ -57,11 +57,11 @@ export default function AboutBox({
         {icon}
         {TitleText}
       </Title>
-      {/* <Icons>
-        {icons[iconList].map((item, index) => (
-          <span key={`rrr${index}`}>{item}</span>
+      <Icons>
+        {Object.keys(icons[iconList]).map((k, index) => (
+          <span key={`rrr${index}`}>{icons[iconList][k]}</span>
         ))}
-      </Icons> */}
+      </Icons>
       <Descrition>{p}</Descrition>
       <Descrition>
         <strong>{strong}</strong>
