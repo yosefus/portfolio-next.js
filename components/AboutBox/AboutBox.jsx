@@ -16,27 +16,27 @@ import {
 } from 'react-icons/si';
 
 const icons = {
-  iconsDev: [
-    <AiFillHtml5 />,
-    <DiReact />,
-    <SiNextdotjs />,
-    <SiNodedotjs />,
-    <SiMongodb />,
-    <SiExpress />,
-    <DiJavascript1 />,
-    <BsFillBootstrapFill />,
-    <BsGithub />,
-  ],
+  iconsDev: {
+    a: <AiFillHtml5 />,
+    b: <DiReact />,
+    c: <SiNextdotjs />,
+    d: <SiNodedotjs />,
+    e: <SiMongodb />,
+    f: <SiExpress />,
+    g: <DiJavascript1 />,
+    h: <BsFillBootstrapFill />,
+    y: <BsGithub />,
+  },
 
-  iconsArt: [
-    <DiSass />,
-    <MdAnimation />,
-    <DiCss3 />,
-    <AiFillCamera />,
-    <DiPhotoshop />,
-    <SiAdobelightroom />,
-    <SiShutterstock />,
-  ],
+  iconsArt: {
+    a: <DiSass />,
+    b: <MdAnimation />,
+    c: <DiCss3 />,
+    d: <AiFillCamera />,
+    e: <DiPhotoshop />,
+    f: <SiAdobelightroom />,
+    g: <SiShutterstock />,
+  },
 };
 
 export default function AboutBox({
