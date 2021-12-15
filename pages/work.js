@@ -65,6 +65,7 @@ export default function Work() {
     let element = ref.current;
 
     const rotate = () => {
+      if (!yingYang.current || !element) return;
       element.style.transform = `translateX(-${window.pageYOffset}px)`;
       yingYang.current.style.transform = `rotate(${-window.pageYOffset}deg)`;
     };
