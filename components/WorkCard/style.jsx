@@ -13,6 +13,7 @@ export const Box = styled(motion.li)`
   justify-content: space-between;
   border-radius: 0 50px 0 50px;
   margin-right: 3rem;
+  overflow: hidden;
 
   h2 {
     text-transform: uppercase;

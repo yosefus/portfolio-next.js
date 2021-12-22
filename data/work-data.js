@@ -15,7 +15,7 @@ const arrWork = [
     sort_path: ['frontend', 'react'],
     web_link: 'https://calculator-with-react-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/react-calc-app',
-    img_path: 'calc',
+    img_path: '/images/calc.png',
   },
   {
     name: 'tic-tac-toe-react',
@@ -33,7 +33,7 @@ const arrWork = [
     sort_path: ['frontend', 'react'],
     web_link: 'https://tic-tac-toe-react-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/tic-tac-toe-react',
-    img_path: 'tic',
+    img_path: '/images/tic.png',
   },
   {
     name: 'tic-tac-toe-js',
@@ -51,7 +51,7 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://tic-tac-toe-pure-js-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/tic-tac-toe--pure-JavaScript',
-    img_path: 'ticjs',
+    img_path: '/images/ticjs.png',
   },
   {
     name: 'Countries-next.js',
@@ -69,7 +69,26 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://countries-next-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/countries-api-next',
-    img_path: 'country',
+    img_path: '/images/country.jpg',
+  },
+
+  {
+    name: 'mern-to-do-list-react',
+    he: {
+      title: 'to do list - mern',
+      description: 'פרויקט מקצה לקצה של משימות - כולל הוספת משימות, עדכון משימות מחיקת משימה ועוד',
+      note: 'צד לקוח ריספונסיבי בריאקט וcss בשיטת המודולס, וצד שרת בnode.js ואקספרס',
+    },
+    en: {
+      title: 'to do list - mern',
+      description: 'a simple MERN project, to do list with add delete and update a task',
+      note: 'Uses module-css, and react, server side with node.js express and mongo.db, fully responsive',
+    },
+    tec: ['html', 'react', 'mongo', 'animation', 'node', 'css', 'express'],
+    sort_path: ['frontend', 'backend'],
+    web_link: 'https://simple-todolist-react-yosefus.herokuapp.com',
+    git_link: 'https://github.com/yosefus/react-to-do-list-simpe-front',
+    img_path: '/images/to-do-list-react.jpg',
   },
 ];
 
