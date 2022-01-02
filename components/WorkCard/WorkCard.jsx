@@ -6,7 +6,7 @@ import { Box, Overlay } from './style';
 
 // icons
 import { BsGithub, BsFillBootstrapFill } from 'react-icons/bs';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaLess } from 'react-icons/fa';
 import { MdAnimation } from 'react-icons/md';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3, DiReact, DiSass, DiJavascript1 } from 'react-icons/di';
@@ -29,6 +29,7 @@ const icons = {
   animation: <MdAnimation />,
   js: <DiJavascript1 />,
   bootstarp: <BsFillBootstrapFill />,
+  less: <FaLess />,
 };
 
 export default function WorkCard({ workItem }) {

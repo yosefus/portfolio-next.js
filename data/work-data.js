@@ -90,6 +90,24 @@ const arrWork = [
     git_link: 'https://github.com/yosefus/react-to-do-list-simpe-front',
     img_path: '/images/to-do-list-react.jpg',
   },
+  {
+    name: 'simple-wesite',
+    he: {
+      title: 'אתר תדמית פשוט',
+      description: ' אתר תדמית ריספונסיבי פשוט',
+      note: 'אתר ריספונסיבי בנוי עם נקסט וless.js עם אנימציות מספריית aos',
+    },
+    en: {
+      title: 'simple website with Less',
+      description: 'A simple responsive website',
+      note: 'Responsive website using less.js and aos for great design',
+    },
+    tec: ['html', 'next', 'animation', 'less', 'css'],
+    sort_path: ['frontend'],
+    web_link: 'https://simple-website-yosefus.netlify.app/',
+    git_link: 'https://github.com/yosefus/next-simple-website',
+    img_path: '/images/simple-web.jpg',
+  },
 ];
 
 export default arrWork;
