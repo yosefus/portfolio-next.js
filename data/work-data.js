@@ -86,7 +86,7 @@ const arrWork = [
     },
     tec: ['html', 'react', 'mongo', 'animation', 'node', 'css', 'express'],
     sort_path: ['frontend', 'backend'],
-    web_link: 'https://simple-todolist-react-yosefus.herokuapp.com',
+    web_link: 'https://to-do-list-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/react-to-do-list-simpe-front',
     img_path: '/images/to-do-list-react.jpg',
   },
