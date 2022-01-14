@@ -9,16 +9,22 @@ import { motion } from 'framer-motion';
 
 const Container = styled.div`
   width: 100vw;
-  height: 400vh;
+  min-height: 100vh;
   background: ${(props) => props.theme.body};
   position: relative;
+  padding: 7rem 2rem;
 `;
 
 const Main = styled(motion.ul)`
-  position: fixed;
+  /* position: fixed;
   top: 12rem;
   left: calc(10rem + 15vw);
+  display: flex; */
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 
   @media (max-width: 992px) {
     top: 45%;
@@ -66,7 +72,7 @@ export default function Work() {
 
     const rotate = () => {
       if (!yingYang.current || !element) return;
-      element.style.transform = `translateX(-${window.pageYOffset}px)`;
+      // element.style.transform = `translateX(-${window.pageYOffset}px)`;
       yingYang.current.style.transform = `rotate(${-window.pageYOffset}deg)`;
     };
 

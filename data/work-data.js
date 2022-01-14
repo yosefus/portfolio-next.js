@@ -108,6 +108,42 @@ const arrWork = [
     git_link: 'https://github.com/yosefus/next-simple-website',
     img_path: '/images/simple-web.jpg',
   },
+  {
+    name: 'movies-rental-mern',
+    he: {
+      title: 'שרת ולקוח- אתר לניהול השכרת סרטים',
+      description: 'כולל הוספת סרטים כאדמין מחיקה עידכון מלאי ועוד...',
+      note: ' כולל מיון לפי נושאים סידור לפי דירוג וחיפוש',
+    },
+    en: {
+      title: 'movies rental website-mern',
+      description: 'with option to add delete and update a movie when connected as an admin',
+      note: 'with search sort by and order by options',
+    },
+    tec: ['react', 'mongo', 'express', 'bootstarp', 'node'],
+    sort_path: ['frontend', 'backend'],
+    web_link: 'https://trying-again-and-again.herokuapp.com',
+    git_link: 'https://github.com/yosefus/moviesapp',
+    img_path: '/images/movies-site.jpg',
+  },
+  {
+    name: 'exercises-project -mern',
+    he: {
+      title: 'co',
+      description: ' אתר מורכב ליצירת ופרסום תרגילים לפי שפות תכנות ועוד...',
+      note: ' כולל אפשרויות לחיפוש, שימוש בטוקן הצפנת סיסמאות וניהול הרשאות בצד הלקוח והשרת',
+    },
+    en: {
+      title: 'Development exercises -mern',
+      description: 'A complex site for creating and publishing exercises',
+      note: 'with search by, token, password encryption, permissions Management on the server and client',
+    },
+    tec: ['react', 'mongo', 'express', 'sass', 'node'],
+    sort_path: ['frontend', 'backend'],
+    web_link: 'https://exercises-yosefus.herokuapp.com',
+    git_link: 'https://github.com/yosefus/exercise-workin',
+    img_path: '/images/exercise.jpg',
+  },
 ];
 
 export default arrWork;

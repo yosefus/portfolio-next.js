@@ -1,5 +1,5 @@
 export const LightTheme = {
-  body: '#FCF6F4',
+  body: '#eaf1fb',
   text: '#000000',
   fontFamily: "'Source Sans Pro', sans-serif",
   bodyRgba: '252, 246, 244',
@@ -7,7 +7,7 @@ export const LightTheme = {
 };
 
 export const DarkTheme = {
-  text: '#FCF6F4',
+  text: '#eaf1fb',
   body: '#000000',
   fontFamily: "'Source Sans Pro', sans-serif",
   textRgba: '252, 246, 244',

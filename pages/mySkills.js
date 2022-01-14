@@ -58,7 +58,7 @@ const Text = {
     developTools: 'Front-end:',
     developToolsList: [
       'Build complex websites, including support for multiple languages.',
-      'html, css, js, React (State management, hooks), Next.js',
+      'html, css, js, React (State management, hooks), Next.js, scss, less',
     ],
   },
   he: {
@@ -69,11 +69,11 @@ const Text = {
     designList: [
       'צלם טבע, נופים ואירועים.',
       'ניסיון עשיר בעריכה בתוכנות לייטרום ופוטושופ.',
-      'עיצוב ובניית אתרים.',
+      'עיצוב ובניית אתרים. ',
     ],
 
     designTools: 'ידע נרחב ב:',
-    designToolsList: ['צילום, לייטרום, פוטושופ,', ' css, Bootstrap 5, Material ui'],
+    designToolsList: ['צילום, לייטרום, פוטושופ,', ' css, Bootstrap 5, Material ui, scss, less.js'],
     developTitle: 'בונה אתרים, צד לקוח וצד שרת',
     developP: 'אני נהנה לפתח וליצור אתרים מורכבים ופשוטים, מקצה לקצה ',
     developStrong: 'Back-end',

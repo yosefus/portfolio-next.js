@@ -124,7 +124,7 @@ export const Icons = styled(motion.div)`
       margin: 0.4rem;
       font-size: 2rem;
       border-radius: 50%;
-      background: #262626ac;
+      background: #262626ce;
       color: #fff;
       border: 1px solid #ffffff68;
 

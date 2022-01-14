@@ -11,9 +11,10 @@ export const Box = styled(motion.li)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 0 50px 0 50px;
+  /* border-radius: 0 50px 0 50px; */
+  border-radius: 10px;
   margin-right: 3rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   h2 {
     text-transform: uppercase;
@@ -76,27 +77,42 @@ export const Overlay = styled(motion.div)`
   padding: 2rem;
   font-size: 2rem;
   border: 3px solid ${(props) => props.theme.text};
-  border-radius: 0 50px 0 50px;
+  /* border-radius: 0 50px 0 50px; */
+  border-radius: 10px;
 
   .layout-img {
-    border-radius: 0 50px 0 50px;
+    border-radius: 10px;
+    /* border-radius: 0 50px 0 50px; */
     z-index: 12;
   }
 
-  a {
+  span {
+    position: absolute;
+    bottom: 0;
     z-index: 16;
-    width: 3rem;
-    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    z-index: 1000;
+  }
+
+  a {
+    z-index: 1000;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: ${(props) => props.theme.text};
+    box-shadow: 3px 3px 15px ${(props) => props.theme.text};
     transition: all 0.2s ease-in-out;
+
+    transform: translateY(50%);
   }
 
   a:hover {
-    transform: scale(1.2);
+    transform: scale(1.3) translateY(40%);
   }
 
   @media (max-width: 600px) {

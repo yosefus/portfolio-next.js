@@ -5,7 +5,7 @@ import { Descrition, Main, Title, Icons } from './style';
 import { BsGithub, BsFillBootstrapFill } from 'react-icons/bs';
 import { MdAnimation } from 'react-icons/md';
 import { AiFillHtml5, AiFillCamera } from 'react-icons/ai';
-import { DiCss3, DiReact, DiSass, DiJavascript1, DiPhotoshop } from 'react-icons/di';
+import { DiCss3, DiReact, DiSass, DiJavascript1, DiPhotoshop, DiLess } from 'react-icons/di';
 import {
   SiNextdotjs,
   SiNodedotjs,
@@ -36,6 +36,7 @@ const icons = {
     e: <DiPhotoshop />,
     f: <SiAdobelightroom />,
     g: <SiShutterstock />,
+    h: <DiLess />,
   },
 };
 

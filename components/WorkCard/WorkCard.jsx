@@ -61,12 +61,14 @@ export default function WorkCard({ workItem }) {
             objectFit="cover"
             priority={true}
           />
-          <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={git_link}>
-            <BsGithub />
-          </a>
-          <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
-            <FaArrowRight />
-          </a>
+          <span>
+            <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={git_link}>
+              <BsGithub />
+            </a>
+            <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
+              <FaArrowRight />
+            </a>
+          </span>
         </Overlay>
       ) : null}
       <h2>{title}</h2>
