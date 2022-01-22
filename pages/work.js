@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from 'react';
-import { WorkCard } from '../components';
+import React, { useEffect, useRef, useContext, useState } from 'react';
+import { FilterBox, WorkCard } from '../components';
 import WorkArr from '../data/work-data';
 import BigTitle from '../layout/BigTitle';
 // style
 import { CgYinyang } from 'react-icons/cg';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { LanguageContext } from './_app';
+import { filter } from '../functions/filterWork';
 
 const Container = styled.div`
   width: 100vw;
@@ -20,13 +22,16 @@ const Main = styled(motion.ul)`
   top: 12rem;
   left: calc(10rem + 15vw);
   display: flex; */
+  position: relative;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
+  margin-top: 2rem;
 
-  @media (max-width: 992px) {
+  /* @media (max-width: 992px) {
     top: 45%;
     left: 30%;
   }
@@ -34,7 +39,7 @@ const Main = styled(motion.ul)`
   @media (max-width: 600px) {
     top: 40%;
     left: 30%;
-  }
+  } */
 `;
 
 const Rotate = styled.div`
@@ -66,6 +71,13 @@ const cont = {
 export default function Work() {
   const ref = useRef(null);
   const yingYang = useRef(null);
+  const [FilterQuery, setFilterQuery] = useState({ difficulty: '', search: '', sort_path: '' });
+
+  const filteredArr = filter({ WorkArr, FilterQuery });
+
+  useEffect(() => {
+    console.log(FilterQuery);
+  }, [FilterQuery]);
 
   useEffect(() => {
     let element = ref.current;
@@ -81,12 +93,15 @@ export default function Work() {
     return () => window.removeEventListener('scroll', rotate);
   }, []);
 
+  const handleChangeFilter = (e) => setFilterQuery({ ...FilterQuery, [e.target.name]: e.target.value });
+
   return (
     <Container>
       <BigTitle text="My Work" top={`10%`} left={`10%`} />
+      <FilterBox handleChangeFilter={handleChangeFilter} FilterQuery={FilterQuery} />
 
       <Main variants={cont} initial="hidden" animate="show" ref={ref}>
-        {WorkArr.map((workItem, i) => (
+        {filteredArr.map((workItem, i) => (
           <WorkCard key={`key${i}`} workItem={workItem} />
         ))}
       </Main>

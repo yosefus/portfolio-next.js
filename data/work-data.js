@@ -34,6 +34,7 @@ const arrWork = [
     web_link: 'https://tic-tac-toe-react-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/tic-tac-toe-react',
     img_path: '/images/tic.png',
+    difficulty: 'easy',
   },
   {
     name: 'tic-tac-toe-js',
@@ -52,6 +53,7 @@ const arrWork = [
     web_link: 'https://tic-tac-toe-pure-js-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/tic-tac-toe--pure-JavaScript',
     img_path: '/images/ticjs.png',
+    difficulty: 'easy',
   },
   {
     name: 'Countries-next.js',
@@ -70,6 +72,7 @@ const arrWork = [
     web_link: 'https://countries-next-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/countries-api-next',
     img_path: '/images/country.jpg',
+    difficulty: 'easy',
   },
 
   {
@@ -89,6 +92,7 @@ const arrWork = [
     web_link: 'https://to-do-list-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/react-to-do-list-simpe-front',
     img_path: '/images/to-do-list-react.jpg',
+    difficulty: 'medium',
   },
   {
     name: 'simple-wesite',
@@ -107,6 +111,7 @@ const arrWork = [
     web_link: 'https://simple-website-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/next-simple-website',
     img_path: '/images/simple-web.jpg',
+    difficulty: 'easy',
   },
   {
     name: 'movies-rental-mern',
@@ -125,6 +130,7 @@ const arrWork = [
     web_link: 'https://trying-again-and-again.herokuapp.com',
     git_link: 'https://github.com/yosefus/moviesapp',
     img_path: '/images/movies-site.jpg',
+    difficulty: 'medium',
   },
   {
     name: 'exercises-project -mern',
@@ -143,6 +149,7 @@ const arrWork = [
     web_link: 'https://exercises-yosefus.herokuapp.com',
     git_link: 'https://github.com/yosefus/exercise-workin',
     img_path: '/images/exercise.jpg',
+    difficulty: 'hard',
   },
 ];
 

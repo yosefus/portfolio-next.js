@@ -1,6 +1,7 @@
 export { default as AboutBox } from './AboutBox/AboutBox';
 export { default as WorkCard } from './WorkCard/WorkCard';
 export { default as WorkInProgress } from './WorkInProgress/WorkInProgress';
+export { default as FilterBox } from './FilterBox/FilterBox';
 // layout
 export { default as PowerButton } from './PowerButton/PowerButton';
 export { default as ControlIcons } from './ControlIcons/ControlIcons';

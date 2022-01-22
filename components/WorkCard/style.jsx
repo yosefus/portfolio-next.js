@@ -43,7 +43,6 @@ export const Box = styled(motion.li)`
   }
 
   @media (max-width: 600px) {
-    font-size: 0.7rem;
     width: 70vw;
     min-height: 75vw;
   }
