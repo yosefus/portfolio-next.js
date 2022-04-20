@@ -187,7 +187,7 @@ const arrWork = [
     web_link: 'https://cars-store-nextjs-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/e-commerce-next-material',
     img_path: '/images/store.jpg',
-    difficulty: 'easy',
+    difficulty: 'hard',
   },
 ];
 
