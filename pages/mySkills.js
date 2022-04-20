@@ -112,11 +112,12 @@ export default function MySkills() {
     <Container variants={cont} initial="hidden" animate="show">
       <Back
         whileHover={{
-          background: `url(${lion.src}), linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))`,
+          // background: `url(${lion.src}), linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))`,
+          // background: `#000000`,
           backgroundPosition: 'right',
           backgroundSize: 'cover',
           scale: 1.1,
-          borderRadius: '50%',
+          // borderRadius: '50%',
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -137,11 +138,12 @@ export default function MySkills() {
 
       <Back
         whileHover={{
-          background: `url(${sheLion.src}), linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))`,
+          // background: `url(${sheLion.src}), linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))`,
+          // background: `#00000`,
           backgroundPosition: 'right',
           backgroundSize: 'cover',
           scale: 1.1,
-          borderRadius: '50%',
+          // borderRadius: '50%',
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

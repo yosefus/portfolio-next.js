@@ -151,6 +151,44 @@ const arrWork = [
     img_path: '/images/exercise.jpg',
     difficulty: 'hard',
   },
+  {
+    name: 'memory game',
+    he: {
+      title: 'משחק הזיכרון',
+      description: 'משחק זיכרון פשוט בונילה',
+      note: 'עם ניקוד, שמירת שמות השחקנים, ובחירת כמות הקלפים - נבנה עם בוטסטראפ וג`אוה סקריפט',
+    },
+    en: {
+      title: 'memory card game js',
+      description: 'game with only vanila js html css and bootstrap',
+      note: 'with score, reset game, choose the number of the card on the board and more',
+    },
+    tec: ['html', 'css', 'js', 'bootstarp'],
+    sort_path: ['frontend'],
+    web_link: 'https://memory-game-js-yosefus.netlify.app/',
+    git_link: 'https://github.com/yosefus/memory-game',
+    img_path: '/images/memory.jpg',
+    difficulty: 'easy',
+  },
+  {
+    name: 'care e-commerce',
+    he: {
+      title: 'אתר חנות אלקטרונית לקניית רכבים',
+      description: 'נבנה בנקסט ומטריאל כולל חיבור לפייפל ובניית מסד נתונים במונגו',
+      note: 'כולל הוספת הסרת מוצרים מהעגלה- ניהול משתנים גלובלים מורכבים וקוקיז',
+    },
+    en: {
+      title: 'e-commerce car store',
+      description: 'build with next.js material ui paypal mongo.db',
+      note: 'with cart managment - global varibles with context and useReducer and more... ',
+    },
+    tec: ['material', 'next', 'sass', 'mongo'],
+    sort_path: ['frontend', "backend"],
+    web_link: 'https://cars-store-nextjs-yosefus.netlify.app/',
+    git_link: 'https://github.com/yosefus/e-commerce-next-material',
+    img_path: '/images/store.jpg',
+    difficulty: 'easy',
+  },
 ];
 
 export default arrWork;

@@ -55,6 +55,10 @@ const FilterDiv = styled(motion.div)`
   * {
     z-index: 10;
   }
+
+ @media (max-width: 600px) {
+    display: none ;
+  } 
 `;
 
 export default function FilterBox({ handleChangeFilter, FilterQuery }) {

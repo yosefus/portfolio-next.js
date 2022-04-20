@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import me from '../../assets/Images/profile.png';
+import me from '../../assets/Images/buisness.svg';
+// import me from '../../assets/Images/face.svg';
+// import me from '../../assets/Images/profile.png';
 import me2 from '../../assets/Images/profile2.png';
 import { motion } from 'framer-motion';
 
@@ -107,17 +109,17 @@ const SubBox = styled.div`
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 
   @media (max-width: 480px) {
     .pic {
-      content: ${`url( ${me2.src})`};
-      left: 120%;
+      content: ${`url( ${me.src})`};
+      left: 70%;
 
       /* bottom: -20px; */
-      width: 100vw;
+      width: 90vw;
       z-index: 1;
     }
   }

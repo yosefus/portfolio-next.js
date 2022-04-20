@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { LanguageContext } from './../../pages/_app';
 
 import Image from 'next/image';
-import { Box, Overlay } from './style';
+import { Box, Overlay, Text } from './style';
 
 // icons
 import { BsGithub, BsFillBootstrapFill } from 'react-icons/bs';
@@ -10,7 +10,7 @@ import { FaArrowRight, FaLess } from 'react-icons/fa';
 import { MdAnimation } from 'react-icons/md';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3, DiReact, DiSass, DiJavascript1 } from 'react-icons/di';
-import { SiNextdotjs, SiNodedotjs, SiMongodb, SiExpress } from 'react-icons/si';
+import { SiNextdotjs, SiNodedotjs, SiMongodb, SiExpress, SiMaterialui } from 'react-icons/si';
 
 const item = {
   hidden: { scale: 0 },
@@ -30,6 +30,7 @@ const icons = {
   js: <DiJavascript1 />,
   bootstarp: <BsFillBootstrapFill />,
   less: <FaLess />,
+  material: <SiMaterialui />
 };
 
 export default function WorkCard({ workItem }) {
@@ -47,6 +48,30 @@ export default function WorkCard({ workItem }) {
       onMouseLeave={() => setShowOverlay(false)}
     >
       {showOverlay ? (
+        <Text
+          initial={{ y: -200, scale: 0 }}
+          animate={{ y: 0, scale: 1 }}
+          transition={{ type: 'keyframes', duration: 1 }}>
+          <h2>{title}</h2>
+          <h3>{description}</h3>
+          <p>{note}</p>
+          <div className="tec-box">
+            {tec.map((item, i) => (
+              <span key={`key${i}`}>{icons[item]}</span>
+            ))}
+          </div>
+          <span className='action'>
+            {git_link && (
+              <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={git_link}>
+                <BsGithub />
+              </a>
+            )}
+            <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
+              <FaArrowRight />
+            </a>
+          </span>
+        </Text>
+      ) :
         <Overlay
           img_path={img_path}
           initial={{ y: -200, scale: 0 }}
@@ -61,24 +86,9 @@ export default function WorkCard({ workItem }) {
             objectFit="cover"
             priority={true}
           />
-          <span>
-            <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={git_link}>
-              <BsGithub />
-            </a>
-            <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
-              <FaArrowRight />
-            </a>
-          </span>
-        </Overlay>
-      ) : null}
-      <h2>{title}</h2>
-      <h3>{description}</h3>
-      <p>{note}</p>
-      <div className="tec-box">
-        {tec.map((item, i) => (
-          <span key={`key${i}`}>{icons[item]}</span>
-        ))}
-      </div>
+
+        </Overlay>}
+
     </Box>
   );
 }

@@ -20,7 +20,7 @@ export const Main = styled.div`
   }
 
   &:hover {
-    color: #fff;
+    /* color: #fff; */
     backdrop-filter: none;
     justify-content: space-around;
     text-align: center;
@@ -65,16 +65,16 @@ export const Title = styled.h2`
   }
 
   ${Main}:hover & {
-    text-shadow: -3px 6px 7px #000;
+    /* text-shadow: -3px 6px 7px #000; */
     flex-direction: column;
 
     svg {
-      text-shadow: 4px 3px 2px #000;
+      /* text-shadow: 4px 3px 2px #000; */
     }
 
     & > * {
-      color: #fff;
-      fill: #fff;
+      /* color: #fff; */
+      /* fill: #fff; */
     }
   }
 
@@ -94,7 +94,7 @@ export const Descrition = styled.div`
   background: transparent;
 
   ${Main}:hover & {
-    color: #fff;
+    /* color: #fff; */
     display: none;
   }
 
@@ -124,11 +124,9 @@ export const Icons = styled(motion.div)`
       margin: 0.4rem;
       font-size: 2rem;
       border-radius: 50%;
-      background: #262626ce;
-      color: #fff;
+      background: ${(props) => props.theme.text};
+      color: ${(props) => props.theme.body};
       border: 1px solid #ffffff68;
-
-      backdrop-filter: blur(20px);
       width: 3rem;
       height: 3rem;
       display: flex;

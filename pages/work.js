@@ -15,13 +15,12 @@ const Container = styled.div`
   background: ${(props) => props.theme.body};
   position: relative;
   padding: 7rem 2rem;
+  @media (max-width: 600px) {
+    padding-top: 14rem ;
+  }
 `;
 
 const Main = styled(motion.ul)`
-  /* position: fixed;
-  top: 12rem;
-  left: calc(10rem + 15vw);
-  display: flex; */
   position: relative;
   margin: 0 auto;
   display: flex;
@@ -30,16 +29,11 @@ const Main = styled(motion.ul)`
   flex-wrap: wrap;
   gap: 3rem;
   margin-top: 2rem;
-
-  /* @media (max-width: 992px) {
-    top: 45%;
-    left: 30%;
-  }
+  padding: 0 3rem ;
 
   @media (max-width: 600px) {
-    top: 40%;
-    left: 30%;
-  } */
+    padding: 0 ;
+  }
 `;
 
 const Rotate = styled.div`
@@ -53,8 +47,6 @@ const Rotate = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* box-shadow: 0px 2px 41px -3px rgba(0, 0, 0, 0.75); */
-
   background: ${(props) => props.theme.body};
   border-radius: 50%;
 
@@ -95,13 +87,15 @@ export default function Work() {
 
   const handleChangeFilter = (e) => setFilterQuery({ ...FilterQuery, [e.target.name]: e.target.value });
 
+  const arrReverse = [...filteredArr].reverse()
+
   return (
     <Container>
       <BigTitle text="My Work" top={`10%`} left={`10%`} />
       <FilterBox handleChangeFilter={handleChangeFilter} FilterQuery={FilterQuery} />
 
       <Main variants={cont} initial="hidden" animate="show" ref={ref}>
-        {filteredArr.map((workItem, i) => (
+        {arrReverse.map((workItem, i) => (
           <WorkCard key={`key${i}`} workItem={workItem} />
         ))}
       </Main>
