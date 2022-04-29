@@ -41,7 +41,7 @@ const Rotate = styled.div`
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  z-index: 1;
+  z-index: 60;
   color: ${(props) => props.theme.text};
   display: block;
   display: flex;
