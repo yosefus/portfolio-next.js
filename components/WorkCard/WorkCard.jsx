@@ -47,31 +47,31 @@ export default function WorkCard({ workItem }) {
       onMouseEnter={() => setShowOverlay(true)}
       onMouseLeave={() => setShowOverlay(false)}
     >
-      {showOverlay ? (
-        <Text
-          initial={{ y: -200, scale: 0 }}
-          animate={{ y: 0, scale: 1 }}
-          transition={{ type: 'keyframes', duration: 1 }}>
-          <h2>{title}</h2>
-          <h3>{description}</h3>
-          <p>{note}</p>
-          <div className="tec-box">
-            {tec.map((item, i) => (
-              <span key={`key${i}`}>{icons[item]}</span>
-            ))}
-          </div>
-          <span className='action'>
-            {git_link && (
-              <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={git_link}>
-                <BsGithub />
-              </a>
-            )}
-            <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
-              <FaArrowRight />
-            </a>
-          </span>
-        </Text>
-      ) :
+
+      <Text
+        initial={{ y: -200, scale: 0 }}
+        animate={{ y: 0, scale: 1 }}
+        transition={{ type: 'keyframes', duration: 1 }}>
+        <h2>{title}</h2>
+        <h3>{description}</h3>
+        <p>{note}</p>
+        <div className="tec-box">
+          {tec.map((item, i) => (
+            <span key={`key${i}`}>{icons[item]}</span>
+          ))}
+        </div>
+      </Text>
+      <span className='action'>
+        {git_link && (
+          <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={git_link}>
+            <BsGithub />
+          </a>
+        )}
+        <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
+          <FaArrowRight />
+        </a>
+      </span>
+      {showOverlay ?
         <Overlay
           img_path={img_path}
           initial={{ y: -200, scale: 0 }}
@@ -87,7 +87,7 @@ export default function WorkCard({ workItem }) {
             priority={true}
           />
 
-        </Overlay>}
+        </Overlay> : ""}
 
     </Box>
   );

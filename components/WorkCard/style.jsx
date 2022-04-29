@@ -10,6 +10,39 @@ export const Box = styled(motion.li)`
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0px 1px 30px -1px ${(props) => props.theme.text};
+
+  .action {
+    position: absolute;
+    bottom: 0;
+    z-index: 16;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    z-index: 1000;
+  }
+
+  .action a {
+    z-index: 1000;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: ${(props) => props.theme.body};
+    box-shadow: 3px 3px 15px ${(props) => props.theme.text};
+    transition: all 0.2s ease-in-out;
+  color: ${(props) => props.theme.text};
+    transform: translateY(50%);
+
+    svg{
+      font-size:1.3rem ;
+    }
+  }
+
+  .action a:hover {
+    transform: scale(1.3) translateY(40%);
+  }
 `;
 
 export const Overlay = styled(motion.div)`
@@ -24,6 +57,7 @@ export const Overlay = styled(motion.div)`
   align-items: flex-end;
   padding: 2rem;
   font-size: 2rem;
+  z-index: 11 ;
 
   .layout-img {
   }
@@ -78,42 +112,11 @@ padding: 2rem;
       justify-content: center;
       border: 1px solid ${(props) => props.theme.body};
       font-size: 1.4rem;
+      
     }
   }
 
-  .action {
-    position: absolute;
-    bottom: 0;
-    z-index: 16;
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    z-index: 1000;
-
-  }
-
-  .action a {
-    z-index: 1000;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: ${(props) => props.theme.body};
-    box-shadow: 3px 3px 15px ${(props) => props.theme.text};
-    transition: all 0.2s ease-in-out;
-  color: ${(props) => props.theme.text};
-    transform: translateY(50%);
-
-    svg{
-      font-size:1.3rem ;
-    }
-  }
-
-  .action a:hover {
-    transform: scale(1.3) translateY(40%);
-  }
+ 
 
   @media (max-width: 600px) {
     min-height: 75vw;

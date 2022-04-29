@@ -41,6 +41,8 @@ const FilterDiv = styled(motion.div)`
   padding: 1rem;
   min-height: 70px;
   background: ${(props) => props.theme.text};
+  box-shadow: 0px 1px 30px -1px ${(props) => props.theme.text};
+
 
   input,
   select {
