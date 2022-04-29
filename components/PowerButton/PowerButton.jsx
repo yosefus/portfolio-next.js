@@ -19,7 +19,7 @@ const Power = styled.button`
   align-items: center;
   justify-content: center;
   color: ${(props) => props.theme.text};
-  z-index: 70;
+  z-index: 4;
   cursor: pointer;
   transition: all 0.2s ease-out;
   box-shadow: 0px 2px 20px -3px rgba(0, 0, 0, 0.75);
