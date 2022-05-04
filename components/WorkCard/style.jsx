@@ -36,7 +36,7 @@ export const Box = styled(motion.li)`
     transform: translateY(50%);
 
     svg{
-      font-size:1.3rem ;
+      font-size:1.5rem ;
     }
   }
 

@@ -95,6 +95,25 @@ const arrWork = [
     difficulty: 'medium',
   },
   {
+    name: 'mern-to-do-list-ts',
+    he: {
+      title: 'to do list - typeScript',
+      description: 'פרויקט מקצה ניהול משימות - כולל הוספת משימות, עדכון משימות, דדליין, מחיקת משימה ועוד',
+      note: 'ריספונסיבי מלא , שמירת הרשימה על הדפדפן במחשב בעזרת localStorage , כתיבה בריאקט בשילוב של טייפסקריפט ',
+    },
+    en: {
+      title: 'to do list - typeScript',
+      description: 'to do list with add delete and update a task, and a deadline option',
+      note: 'Uses module-scss, and react with typeScript, fully responsive',
+    },
+    tec: ['html', 'react', 'ts', 'sass'],
+    sort_path: ['frontend'],
+    web_link: 'https://to-do-list-ts-yosefus.netlify.app/',
+    git_link: 'https://github.com/yosefus/todolist-ts',
+    img_path: '/images/to-do-list-ts.jpg',
+    difficulty: 'medium',
+  },
+  {
     name: 'simple-wesite',
     he: {
       title: 'אתר תדמית פשוט',

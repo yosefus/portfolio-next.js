@@ -6,11 +6,11 @@ import { Box, Overlay, Text } from './style';
 
 // icons
 import { BsGithub, BsFillBootstrapFill } from 'react-icons/bs';
-import { FaArrowRight, FaLess } from 'react-icons/fa';
+import { FaLess } from 'react-icons/fa';
 import { MdAnimation } from 'react-icons/md';
-import { AiFillHtml5 } from 'react-icons/ai';
+import { AiFillHtml5, AiOutlineGlobal } from 'react-icons/ai';
 import { DiCss3, DiReact, DiSass, DiJavascript1 } from 'react-icons/di';
-import { SiNextdotjs, SiNodedotjs, SiMongodb, SiExpress, SiMaterialui } from 'react-icons/si';
+import { SiNextdotjs, SiNodedotjs, SiMongodb, SiExpress, SiMaterialui, SiTypescript } from 'react-icons/si';
 
 const item = {
   hidden: { scale: 0 },
@@ -30,7 +30,8 @@ const icons = {
   js: <DiJavascript1 />,
   bootstarp: <BsFillBootstrapFill />,
   less: <FaLess />,
-  material: <SiMaterialui />
+  material: <SiMaterialui />,
+  ts: <SiTypescript />
 };
 
 export default function WorkCard({ workItem }) {
@@ -68,7 +69,7 @@ export default function WorkCard({ workItem }) {
           </a>
         )}
         <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
-          <FaArrowRight />
+          <AiOutlineGlobal />
         </a>
       </span>
       {showOverlay ?
