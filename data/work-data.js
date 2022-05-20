@@ -208,6 +208,25 @@ const arrWork = [
     img_path: '/images/store.jpg',
     difficulty: 'hard',
   },
+  {
+    name: 'trivia game',
+    he: {
+      title: 'משחק של כרטיסי שאלות בסגנון אמריקאי',
+      description: 'נכתב בריאקט + שמירת שאלות חדשות על הlocalstorage',
+      note: 'עם הוספת שאלות חדשות - אפשרות של רמז ועוד...',
+    },
+    en: {
+      title: 'trivia card game',
+      description: 'build with react and pure css',
+      note: 'with add new questions option, get a clue and more...',
+    },
+    tec: ['react', 'css', 'html', 'animation'],
+    sort_path: ['frontend'],
+    web_link: 'https://trivia-yosefus.netlify.app/',
+    git_link: 'https://github.com/yosefus/trivia',
+    img_path: '/images/trivia.jpg',
+    difficulty: 'hard',
+  },
 ];
 
 export default arrWork;
