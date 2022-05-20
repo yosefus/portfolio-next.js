@@ -33,6 +33,7 @@ const Main = styled(motion.ul)`
 
   @media (max-width: 600px) {
     padding: 0 ;
+    gap: 5rem;
   }
 `;
 

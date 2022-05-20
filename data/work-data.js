@@ -225,7 +225,7 @@ const arrWork = [
     web_link: 'https://trivia-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/trivia',
     img_path: '/images/trivia.jpg',
-    difficulty: 'hard',
+    difficulty: 'easy',
   },
 ];
 

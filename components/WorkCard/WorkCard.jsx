@@ -50,6 +50,7 @@ export default function WorkCard({ workItem }) {
     >
 
       <Text
+        img={img_path}
         initial={{ y: -200, scale: 0 }}
         animate={{ y: 0, scale: 1 }}
         transition={{ type: 'keyframes', duration: 1 }}>
@@ -72,24 +73,6 @@ export default function WorkCard({ workItem }) {
           <AiOutlineGlobal />
         </a>
       </span>
-      {showOverlay ?
-        <Overlay
-          img_path={img_path}
-          initial={{ y: -200, scale: 0 }}
-          animate={{ y: 0, scale: 1 }}
-          transition={{ type: 'keyframes', duration: 1 }}
-        >
-          <Image
-            alt="preview of the website"
-            src={img_path}
-            layout="fill"
-            className="layout-img"
-            objectFit="cover"
-            priority={true}
-          />
-
-        </Overlay> : ""}
-
     </Box>
   );
 }

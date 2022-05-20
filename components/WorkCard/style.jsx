@@ -45,34 +45,6 @@ export const Box = styled(motion.li)`
   }
 `;
 
-export const Overlay = styled(motion.div)`
-  direction: ltr;
-  position: absolute; 
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  padding: 2rem;
-  font-size: 2rem;
-  z-index: 11 ;
-
-  .layout-img {
-  }
-
-
-
-  @media (max-width: 600px) {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    min-height: 75vw;
-  }
-`;
-
 
 export const Text = styled(motion.div)`
  background: ${(props) => props.theme.text};
@@ -83,11 +55,24 @@ export const Text = styled(motion.div)`
   bottom: 0;
   left: 0; 
 z-index:10 ;
-
 padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition:all ease-in-out .6s ;
+
+
+
+  &:hover{
+    background: ${props => (`url(${props.img})`)};
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover ;
+
+    h2, h3, p, div {
+      display: none;
+    }
+  }
 
   h2 {
     text-transform: uppercase;
