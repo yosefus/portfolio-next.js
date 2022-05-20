@@ -59,7 +59,7 @@ const FilterDiv = styled(motion.div)`
   }
 
  @media (max-width: 600px) {
-    display: none ;
+    /* display: none ; */
   } 
 `;
 
