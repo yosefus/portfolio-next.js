@@ -227,6 +227,25 @@ const arrWork = [
     img_path: '/images/trivia-s.jpg',
     difficulty: 'easy',
   },
+  {
+    name: 'trivia typescript',
+    he: {
+      title: 'טריויה- שאלות מסוגים שונים',
+      description: 'נכתב בטייפסקריפט - עם אפשרות בחירה בקטגוריות רמה ועוד... ',
+      note: 'שימוש בapi חיצוני וcustom hooks',
+    },
+    en: {
+      title: 'trivia - using api',
+      description: 'build with typescript - With category selection, level and amount of questions',
+      note: 'with costum hooks sass and more...',
+    },
+    tec: ['react', 'sass', 'react', 'animation', "ts"],
+    sort_path: ['frontend'],
+    web_link: 'https://trivia-yosefus.netlify.app/',
+    git_link: '',
+    img_path: '/images/trivia-ts-s.jpg',
+    difficulty: 'medium',
+  },
 ];
 
 export default arrWork;
