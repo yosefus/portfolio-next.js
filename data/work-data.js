@@ -15,7 +15,7 @@ const arrWork = [
     sort_path: ['frontend', 'react'],
     web_link: 'https://calculator-with-react-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/react-calc-app',
-    img_path: '/images/calc.png',
+    img_path: '/images/calc-s.jpg',
   },
   {
     name: 'tic-tac-toe-react',
@@ -33,7 +33,7 @@ const arrWork = [
     sort_path: ['frontend', 'react'],
     web_link: 'https://tic-tac-toe-react-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/tic-tac-toe-react',
-    img_path: '/images/tic.png',
+    img_path: '/images/tic-s.jpg',
     difficulty: 'easy',
   },
   {
@@ -52,7 +52,7 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://tic-tac-toe-pure-js-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/tic-tac-toe--pure-JavaScript',
-    img_path: '/images/ticjs.png',
+    img_path: '/images/ticjs-s.jpg',
     difficulty: 'easy',
   },
   {
@@ -71,7 +71,7 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://countries-next-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/countries-api-next',
-    img_path: '/images/country.jpg',
+    img_path: '/images/country-s.jpg',
     difficulty: 'easy',
   },
 
@@ -91,7 +91,7 @@ const arrWork = [
     sort_path: ['frontend', 'backend'],
     web_link: 'https://to-do-list-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/react-to-do-list-simpe-front',
-    img_path: '/images/to-do-list-react.jpg',
+    img_path: '/images/to-do-list-react-s.jpg',
     difficulty: 'medium',
   },
   {
@@ -110,7 +110,7 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://to-do-list-ts-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/todolist-ts',
-    img_path: '/images/to-do-list-ts.jpg',
+    img_path: '/images/to-do-list-ts-s.jpg',
     difficulty: 'medium',
   },
   {
@@ -129,7 +129,7 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://simple-website-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/next-simple-website',
-    img_path: '/images/simple-web.jpg',
+    img_path: '/images/simple-web-s.jpg',
     difficulty: 'easy',
   },
   {
@@ -148,7 +148,7 @@ const arrWork = [
     sort_path: ['frontend', 'backend'],
     web_link: 'https://trying-again-and-again.herokuapp.com',
     git_link: 'https://github.com/yosefus/moviesapp',
-    img_path: '/images/movies-site.jpg',
+    img_path: '/images/movies-site-s.jpg',
     difficulty: 'medium',
   },
   {
@@ -167,7 +167,7 @@ const arrWork = [
     sort_path: ['frontend', 'backend'],
     web_link: 'https://exercises-yosefus.herokuapp.com',
     git_link: 'https://github.com/yosefus/exercise-workin',
-    img_path: '/images/exercise.jpg',
+    img_path: '/images/exercise-s.jpg',
     difficulty: 'hard',
   },
   {
@@ -186,7 +186,7 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://memory-game-js-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/memory-game',
-    img_path: '/images/memory.jpg',
+    img_path: '/images/memory-s.jpg',
     difficulty: 'easy',
   },
   {
@@ -205,7 +205,7 @@ const arrWork = [
     sort_path: ['frontend', "backend"],
     web_link: 'https://cars-store-nextjs-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/e-commerce-next-material',
-    img_path: '/images/store.jpg',
+    img_path: '/images/store-s.jpg',
     difficulty: 'hard',
   },
   {
@@ -224,7 +224,7 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://trivia-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/trivia',
-    img_path: '/images/trivia.jpg',
+    img_path: '/images/trivia-s.jpg',
     difficulty: 'easy',
   },
 ];
