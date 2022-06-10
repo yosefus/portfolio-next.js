@@ -52,8 +52,12 @@ const TextBox = styled.div`
   .linkPort {
     font-size: 1rem;
     width: fit-content;
-    padding-top: 0.3rem;
+    padding: 0.3rem .6rem;
     display: flex;
+    border: ${(props) => `2px solid ${props.theme.mainC}`}  ;
+    border-radius: 15px ;
+    
+
 
     span {
       display: flex;
@@ -91,6 +95,7 @@ const TextBox = styled.div`
     .linkPort {
       margin: auto;
       font-size: 0.9rem;
+
       span {
         opacity: 0.8;
       }
@@ -106,7 +111,7 @@ const SubBox = styled.div`
   .pic {
     position: absolute;
     content: ${`url( ${me.src})`};
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 80%;

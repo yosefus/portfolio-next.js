@@ -40,18 +40,20 @@ const FilterDiv = styled(motion.div)`
   gap: 1rem;
   padding: 1rem;
   min-height: 70px;
-  background: ${(props) => props.theme.text};
-  box-shadow: 0px 1px 30px -1px ${(props) => props.theme.text};
+  /* background: ${(props) => props.theme.text}; */
+  /* box-shadow: 0px 1px 30px -1px ${(props) => props.theme.text}; */
 
 
   input,
   select {
     width: 300px;
     outline: none;
-    border: none;
     line-height: 1.6rem;
     padding: 0.3rem 0.6rem;
     font-size: 1.2rem;
+    border:${(props) => ` 2px solid ${props.theme.text}`} ;
+    border-radius: 10px;
+
   }
 
   * {

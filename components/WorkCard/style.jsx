@@ -9,8 +9,10 @@ export const Box = styled(motion.li)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px 1px 30px -1px ${(props) => props.theme.text};
-
+  box-shadow:  ${(props) => props.theme.name == "light" ? ` 0px 10px 15px -3px ${props.theme.text}` : "none"};
+  border:  ${(props) => props.theme.name == "dark" ? ` 3px solid ${props.theme.mainC}` : "none"};
+  border-radius:  ${(props) => props.theme.name == "dark" ? `15px` : "none"};
+  
   .action {
     position: absolute;
     bottom: 0;
@@ -43,16 +45,17 @@ export const Box = styled(motion.li)`
   .action a:hover {
     transform: scale(1.3) translateY(40%);
   }
-`;
+  `;
 
 
 export const Text = styled(motion.div)`
  background: ${(props) => props.theme.text};
+ border-radius:  ${(props) => props.theme.name == "dark" ? `12px` : "none"};
   color: ${(props) => props.theme.body};
    position: absolute; 
    top: 0;
-  right: 0;
-  bottom: 0;
+   right: 0;
+   bottom: 0;
   left: 0; 
 z-index:10 ;
 padding: 2rem;

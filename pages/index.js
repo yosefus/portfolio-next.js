@@ -60,7 +60,7 @@ export default function Home() {
             <h3>
               <GiYinYang />
             </h3>
-            <span>{Text[lang].clickMe}</span>
+            <h4>{Text[lang].clickMe}</h4>
           </Center>
         </Container>
       </MainContainer>
