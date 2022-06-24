@@ -241,7 +241,7 @@ const arrWork = [
     },
     tec: ['react', 'sass', 'react', 'animation', "ts"],
     sort_path: ['frontend'],
-    web_link: 'https://trivia-yosefus.netlify.app/',
+    web_link: 'https://trivia-typescript-yosefus.netlify.app/',
     git_link: '',
     img_path: '/images/trivia-ts-s.jpg',
     difficulty: 'medium',
