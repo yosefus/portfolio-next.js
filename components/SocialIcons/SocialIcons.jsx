@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Icons, Line } from './style';
 // icons
 import { AiFillGithub } from 'react-icons/ai';
-import { BsFacebook } from 'react-icons/bs';
+import { BsFacebook, BsFillCameraVideoFill } from 'react-icons/bs';
 import { SiShutterstock } from 'react-icons/si';
 import { FaLinkedinIn } from 'react-icons/fa';
 // animation
@@ -23,12 +23,23 @@ export default function SocialIcons({ click }) {
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', delay: 1, duration: 1 }}
       >
+        <Link href="https://www.pond5.com/artist/yosilon?tab=footage">
+          <a target="_blank">
+            <BsFillCameraVideoFill />
+          </a>
+        </Link>
+      </motion.div>
+      {/* <motion.div
+        initial={{ transform: 'scale(0)' }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: 'spring', delay: 1, duration: 1 }}
+      >
         <Link href="https://github.com/yosefus?tab=repositories">
           <a target="_blank">
             <AiFillGithub />
           </a>
         </Link>
-      </motion.div>
+      </motion.div> */}
       <motion.div
         initial={{ transform: 'scale(0)' }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -56,7 +67,7 @@ export default function SocialIcons({ click }) {
         animate={{ scale: [0, 1, 1.5, 1] }}
         transition={{ type: 'spring', delay: 1.6, duration: 1 }}
       >
-        <Link href="https://www.linkedin.com/in/yosef-yaha-612694215/">
+        <Link href="https://www.linkedin.com/in/yosef-yahav-612694215/">
           <a target="_blank">
             <FaLinkedinIn />
           </a>
