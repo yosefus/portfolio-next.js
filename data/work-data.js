@@ -132,25 +132,25 @@ const arrWork = [
     img_path: '/images/simple-web-s.jpg',
     difficulty: 'easy',
   },
-  {
-    name: 'movies-rental-mern',
-    he: {
-      title: 'שרת ולקוח- אתר לניהול השכרת סרטים',
-      description: 'כולל הוספת סרטים כאדמין מחיקה עידכון מלאי ועוד...',
-      note: ' כולל מיון לפי נושאים סידור לפי דירוג וחיפוש',
-    },
-    en: {
-      title: 'movies rental website-mern',
-      description: 'with option to add delete and update a movie when connected as an admin',
-      note: 'with search sort by and order by options',
-    },
-    tec: ['react', 'mongo', 'express', 'bootstarp', 'node'],
-    sort_path: ['frontend', 'backend'],
-    web_link: 'https://trying-again-and-again.herokuapp.com',
-    git_link: 'https://github.com/yosefus/moviesapp',
-    img_path: '/images/movies-site-s.jpg',
-    difficulty: 'medium',
-  },
+  // {
+  //   name: 'movies-rental-mern',
+  //   he: {
+  //     title: 'שרת ולקוח- אתר לניהול השכרת סרטים',
+  //     description: 'כולל הוספת סרטים כאדמין מחיקה עידכון מלאי ועוד...',
+  //     note: ' כולל מיון לפי נושאים סידור לפי דירוג וחיפוש',
+  //   },
+  //   en: {
+  //     title: 'movies rental website-mern',
+  //     description: 'with option to add delete and update a movie when connected as an admin',
+  //     note: 'with search sort by and order by options',
+  //   },
+  //   tec: ['react', 'mongo', 'express', 'bootstarp', 'node'],
+  //   sort_path: ['frontend', 'backend'],
+  //   web_link: 'https://trying-again-and-again.herokuapp.com',
+  //   git_link: 'https://github.com/yosefus/moviesapp',
+  //   img_path: '/images/movies-site-s.jpg',
+  //   difficulty: 'medium',
+  // },
   {
     name: 'exercises-project -mern',
     he: {
