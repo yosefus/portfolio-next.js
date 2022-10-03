@@ -246,6 +246,25 @@ const arrWork = [
     img_path: '/images/trivia-ts-s.jpg',
     difficulty: 'medium',
   },
+  {
+    name: 'music app - ts',
+    he: {
+      title: 'אפליקציה לשמיעת מוזיקה',
+      description: 'כולל התחברות, שמירה והסרה של שירים מפלייליסטים ועוד... ',
+      note: 'נבנה עם Next.js TypeScript , Scss',
+    },
+    en: {
+      title: 'music app - TypeScript',
+      description: 'A site for listening to and saving music - including logging in, saving playlists, searching YouTube, and more',
+      note: 'build with Next.js TypeScript and Scss ',
+    },
+    tec: ['next', 'sass', "ts", "mongo", "bootstarp"],
+    sort_path: ['frontend', 'backend'],
+    web_link: 'https://spotlify-yosefus.netlify.app/',
+    git_link: '',
+    img_path: '/images/music-app-s.jpg',
+    difficulty: 'hard',
+  },
 ];
 
 export default arrWork;
