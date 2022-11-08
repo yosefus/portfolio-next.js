@@ -165,7 +165,7 @@ const arrWork = [
     },
     tec: ['react', 'mongo', 'express', 'sass', 'node'],
     sort_path: ['frontend', 'backend'],
-    web_link: 'https://exercises-yosefus.herokuapp.com',
+    web_link: 'https://exercise-example.onrender.com',
     git_link: 'https://github.com/yosefus/exercise-workin',
     img_path: '/images/exercise-s.jpg',
     difficulty: 'hard',
