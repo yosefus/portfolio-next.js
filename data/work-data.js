@@ -1,10 +1,10 @@
 const arrWork = [
   {
-    name: 'calc-react',
+    name: 'flight-blog',
     he: {
-      title: 'מחשבון בריאקט',
-      description: 'מחשבון מעוצב וריספונסיבי בריאקט, ובעזרת שימוש בuseReducer',
-      note: 'שימוש בפריסה בgrid, קוד נקי ואלגנטי בעזרת useReducer',
+      title: 'בלוג טיסות',
+      description: 'בלוג לטיסות עם אפשרות להשארת תגובות והוספת פוסטים חדשים',
+      note: 'בניה מהירה בעזרת tailwind graphCMS graphQL',
     },
     en: {
       title: 'react calculator',
@@ -15,7 +15,25 @@ const arrWork = [
     sort_path: ['frontend', 'react'],
     web_link: 'https://calculator-with-react-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/react-calc-app',
+    img_path: '/images/blog.jpg',
+  },
+  {
+    name: 'calc-react',
+    he: {
+      title: 'מחשבון בריאקט',
+      description: 'מחשבון מעוצב וריספונסיבי בריאקט, ובעזרת שימוש בuseReducer',
+      note: 'שימוש בפריסה בgrid, קוד נקי ואלגנטי בעזרת useReducer',
+    },
+    en: {
+      title: 'flight blog',
+      description: 'flight blog using next.js tailwind and graphQL',
+      note: 'with add comment option and lot more...',
+    },
+    tec: ['html', 'sass', 'next', 'mongo', 'graphql', 'tailwind'],
+    sort_path: ['frontend', 'backend'],
+    web_link: 'https://blogs-try-yosefus.vercel.app/',
     img_path: '/images/calc-s.jpg',
+    git_link: '',
   },
   {
     name: 'tic-tac-toe-react',

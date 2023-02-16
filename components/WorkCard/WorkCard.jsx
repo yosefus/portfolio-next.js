@@ -10,7 +10,7 @@ import { FaLess } from 'react-icons/fa';
 import { MdAnimation } from 'react-icons/md';
 import { AiFillHtml5, AiOutlineGlobal } from 'react-icons/ai';
 import { DiCss3, DiReact, DiSass, DiJavascript1 } from 'react-icons/di';
-import { SiNextdotjs, SiNodedotjs, SiMongodb, SiExpress, SiMaterialui, SiTypescript } from 'react-icons/si';
+import { SiNextdotjs, SiNodedotjs, SiMongodb, SiExpress, SiMaterialui, SiTypescript, SiApollographql, SiTailwindcss } from 'react-icons/si';
 
 const item = {
   hidden: { scale: 0 },
@@ -31,7 +31,9 @@ const icons = {
   bootstarp: <BsFillBootstrapFill />,
   less: <FaLess />,
   material: <SiMaterialui />,
-  ts: <SiTypescript />
+  graphql: <SiApollographql />,
+  ts: <SiTypescript />,
+  tailwind: <SiTailwindcss />,
 };
 
 export default function WorkCard({ workItem }) {
