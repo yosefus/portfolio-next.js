@@ -1,22 +1,5 @@
 const arrWork = [
-  {
-    name: 'flight-blog',
-    he: {
-      title: 'בלוג טיסות',
-      description: 'בלוג לטיסות עם אפשרות להשארת תגובות והוספת פוסטים חדשים',
-      note: 'בניה מהירה בעזרת tailwind graphCMS graphQL',
-    },
-    en: {
-      title: 'react calculator',
-      description: 'Designed and responsive calculator in React, using useReducer',
-      note: 'Using a grid layout, clean and elegant code using useReducer',
-    },
-    tec: ['html', 'css', 'react', 'animation'],
-    sort_path: ['frontend', 'react'],
-    web_link: 'https://calculator-with-react-yosefus.netlify.app',
-    git_link: 'https://github.com/yosefus/react-calc-app',
-    img_path: '/images/blog.jpg',
-  },
+
   {
     name: 'calc-react',
     he: {
@@ -282,6 +265,24 @@ const arrWork = [
     git_link: '',
     img_path: '/images/music-app-s.jpg',
     difficulty: 'hard',
+  },
+  {
+    name: 'flight-blog',
+    he: {
+      title: 'בלוג טיסות',
+      description: 'בלוג לטיסות עם אפשרות להשארת תגובות והוספת פוסטים חדשים',
+      note: 'בניה מהירה בעזרת tailwind graphCMS graphQL',
+    },
+    en: {
+      title: 'react calculator',
+      description: 'Designed and responsive calculator in React, using useReducer',
+      note: 'Using a grid layout, clean and elegant code using useReducer',
+    },
+    tec: ['html', 'css', 'react', 'animation'],
+    sort_path: ['frontend', 'react'],
+    web_link: 'https://calculator-with-react-yosefus.netlify.app',
+    git_link: 'https://github.com/yosefus/react-calc-app',
+    img_path: '/images/blog.jpg',
   },
 ];
 
