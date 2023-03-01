@@ -284,6 +284,24 @@ const arrWork = [
     web_link: 'https://blogs-try-yosefus.vercel.app/',
     img_path: '/images/blog.jpg',
   },
+  {
+    name: 'restaurant',
+    he: {
+      title: 'אתר למסעדה',
+      description: 'אתר פשוט למסעדה עם react וbootstrap',
+      note: 'עם הזמנת מנות, ניהול התקדמות ההכנה של המנות מצד המארח, ואנימציות',
+    },
+    en: {
+      title: 'restaurant',
+      description: 'restaurant simple website with react and bootstrap',
+      note: 'with order dishes, handle progress, and more',
+
+    },
+    tec: ['react', 'bootstarp', 'sass', 'animation',],
+    sort_path: ['frontend'],
+    web_link: 'https://snazzy-restaurant.netlify.app/',
+    img_path: '/images/rest.jpg',
+  },
 ];
 
 export default arrWork;
