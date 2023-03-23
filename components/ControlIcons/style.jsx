@@ -6,7 +6,7 @@ export const Icons = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 3;
+  z-index: 300;
   top: 0;
   right: 2rem;
   background: transparent;

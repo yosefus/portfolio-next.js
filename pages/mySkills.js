@@ -54,11 +54,11 @@ const Text = {
     developTitle: 'Frontend and Backend Developer.',
     developP: 'I enjoy developing and creating complex and simple sites, from end to end',
     developStrong: 'Back-end:',
-    developList: ['Creating routes and complex logic,', 'Node.js, Express, mongoDb'],
+    developList: ['Creating routes and complex logic,', 'Node.js, Express, mongoDb', 'python - Self-study'],
     developTools: 'Front-end:',
     developToolsList: [
       'Build complex websites, including support for multiple languages.',
-      'html, css, js, React (State management, hooks), Next.js, scss, less',
+      'html, css, js, React (State management, hooks), Next.js, scss, less, tailwind, framer-motion',
     ],
   },
   he: {
@@ -77,11 +77,11 @@ const Text = {
     developTitle: 'בונה אתרים, צד לקוח וצד שרת',
     developP: 'אני נהנה לפתח וליצור אתרים מורכבים ופשוטים, מקצה לקצה ',
     developStrong: 'Back-end',
-    developList: ['יצירת ראוטים ולוגיקה מורכבת,', 'node.js, express, mongoDb'],
+    developList: ['יצירת ראוטים ולוגיקה מורכבת,', 'node.js, express, mongoDb', 'לימוד עצמי של python'],
     developTools: 'Front-end',
     developToolsList: [
       'בניית אתרים מורכבים, כולל תמיכה בשפות מרובות',
-      'html, css, js, React(כולל ניהול סטייטים גלובליים, hooks), Next.js',
+      'html, css, js, React(כולל ניהול סטייטים גלובליים, hooks), Next.js, tailwind, framer-motion',
     ],
   },
 };
