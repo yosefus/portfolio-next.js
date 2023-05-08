@@ -283,6 +283,7 @@ const arrWork = [
     sort_path: ['frontend', 'backend'],
     web_link: 'https://blogs-try-yosefus.vercel.app/',
     img_path: '/images/blog.jpg',
+    difficulty: 'medium',
   },
   {
     name: 'restaurant',
@@ -301,6 +302,47 @@ const arrWork = [
     sort_path: ['frontend'],
     web_link: 'https://snazzy-restaurant.netlify.app/',
     img_path: '/images/rest.jpg',
+    difficulty: 'easy',
+  },
+  {
+    name: 'game portal example',
+    he: {
+      title: 'אתר למשחקי רשת -דוגמא',
+      description: 'תרגיל ביצירת אתר בjs vanila css html',
+      note: 'עיצוב פשוט וקליל',
+    },
+    en: {
+      title: 'online games website',
+      description: 'example of simple web',
+      note: 'using vanila-js css and html',
+
+    },
+    tec: ['css', 'html', 'js'],
+    sort_path: ['frontend'],
+    web_link: 'https://front-class-website.netlify.app/index.html',
+    img_path: '/images/games.jpg',
+    difficulty: 'easy',
+    git_link: 'https://github.com/yosefus/front-games-class'
+  },
+  {
+    name: 'crypto coins store',
+    he: {
+      title: 'זירת מסחר וירטואלית לקריפטו',
+      description: 'סימולטור של קניה ומכירה של מטבעות וירטואליות ללא דמי עמלה ',
+      note: 'עיצוב קליל ונוח - ריספונסיבי וכולל רכישה ומכירה בזמן אמת',
+    },
+    en: {
+      title: 'crypto coins store',
+      description: 'A virtual currency trading arena simulator',
+      note: 'using next.js, google analytics, and more...',
+
+    },
+    tec: ['next', 'sass', 'mongo'],
+    sort_path: ['frontend', 'backend'],
+    web_link: 'https://crypto-app-yosefus.vercel.app/',
+    img_path: '/images/crypto.jpg',
+    difficulty: 'hard',
+    git_link: ''
   },
 ];
 
