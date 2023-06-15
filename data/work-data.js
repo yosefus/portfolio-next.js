@@ -114,6 +114,25 @@ const arrWork = [
     img_path: '/images/todo.jpg',
     difficulty: 'medium',
   },
+  {
+    name: 'simple store example',
+    he: {
+      title: 'חנות לתרגול לתלמידים',
+      description: 'חנות קלילה לתרגול צד לקוח עם ריאקט',
+      note: 'רספונסיבי ונוח - קלילות ופשיטות',
+    },
+    en: {
+      title: 'simple store example',
+      description: 'simple store for practise',
+      note: 'responsive and clean design ',
+    },
+    tec: ['html', 'react', 'animation',],
+    sort_path: ['frontend'],
+    web_link: 'https://store-react-example.netlify.app/',
+    git_link: 'https://github.com/yosefus/store-react-example',
+    img_path: '/images/store-example.jpg',
+    difficulty: 'easy',
+  },
   // {
   //   name: 'mern-to-do-list-ts',
   //   he: {
