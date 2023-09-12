@@ -382,6 +382,26 @@ const arrWork = [
     difficulty: 'hard',
     git_link: ''
   },
+  {
+    name: 'carnaim',
+    he: {
+      title: 'אתר למכירת רכבים',
+      description: 'אתר שמדמה סוכנות רכב מפוברקת כלשהי',
+      note: 'כולל צפיה בדגמים בתלת מימד ואופטימיזציה לseo',
+    },
+    en: {
+      title: 'car selling website',
+      description: 'car e-commerce store',
+      note: 'with 3d models of cars, animations, and seo optimization',
+
+    },
+    tec: ['next', 'tailwind', 'sql', 'prisma', 'three'],
+    sort_path: ['frontend', 'backend'],
+    web_link: 'https://carnaim.vercel.app/',
+    img_path: '/images/carnaim.jpg',
+    difficulty: 'hard',
+    git_link: ''
+  },
 ];
 
 export default arrWork;

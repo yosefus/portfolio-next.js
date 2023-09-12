@@ -2,15 +2,16 @@ import React, { useContext, useState } from 'react';
 import { LanguageContext } from './../../pages/_app';
 
 import Image from 'next/image';
-import { Box, Overlay, Text } from './style';
+import { Box, Text } from './style';
 
 // icons
-import { BsGithub, BsFillBootstrapFill } from 'react-icons/bs';
+import { BsGithub, BsFillBootstrapFill, BsFiletypeSql, } from 'react-icons/bs';
 import { FaLess } from 'react-icons/fa';
+import { TbBrandThreejs } from 'react-icons/tb';
 import { MdAnimation } from 'react-icons/md';
 import { AiFillHtml5, AiOutlineGlobal } from 'react-icons/ai';
 import { DiCss3, DiReact, DiSass, DiJavascript1 } from 'react-icons/di';
-import { SiNextdotjs, SiNodedotjs, SiMongodb, SiExpress, SiMaterialui, SiTypescript, SiApollographql, SiTailwindcss } from 'react-icons/si';
+import { SiNextdotjs, SiNodedotjs, SiMongodb, SiExpress, SiMui, SiTypescript, SiApollographql, SiTailwindcss, SiPrisma } from 'react-icons/si';
 
 const item = {
   hidden: { scale: 0 },
@@ -30,10 +31,13 @@ const icons = {
   js: <DiJavascript1 />,
   bootstarp: <BsFillBootstrapFill />,
   less: <FaLess />,
-  material: <SiMaterialui />,
+  material: <SiMui />,
   graphql: <SiApollographql />,
   ts: <SiTypescript />,
   tailwind: <SiTailwindcss />,
+  sql: <BsFiletypeSql />,
+  prisma: <SiPrisma />,
+  three: <TbBrandThreejs />,
 };
 
 export default function WorkCard({ workItem }) {
