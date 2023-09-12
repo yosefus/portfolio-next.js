@@ -56,13 +56,13 @@ export default function WorkCard({ workItem }) {
     >
 
       <Text
-        img={img_path}
         initial={{ y: -200, scale: 0 }}
         animate={{ y: 0, scale: 1 }}
         transition={{ type: 'keyframes', duration: 1 }}>
         <h2>{title}</h2>
         <h3>{description}</h3>
         <p>{note}</p>
+        <Image src={img_path} layout='fill' objectFit='cover' alt={title} />
         <div className="tec-box">
           {tec.map((item, i) => (
             <span key={`key${i}`}>{icons[item]}</span>

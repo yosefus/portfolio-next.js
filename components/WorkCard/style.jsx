@@ -63,17 +63,31 @@ padding: 2rem;
   flex-direction: column;
   justify-content: space-between;
   transition:all ease-in-out .6s ;
+  overflow: hidden;
 
+  h2, h3, p, div {
+    transition: all ease-in-out .7s;
+  }
 
-
+  img {
+    transform: translateX(-400px) !important;
+    z-index: -1;
+    transition: all ease-in-out .3s;
+  }
+  
   &:hover{
-    background: ${props => (`url(${props.img})`)};
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover ;
-
+    
+    img{
+      display : block !important;
+      transform: translateX(0) !important;
+    }
+    
     h2, h3, p, div {
-      display: none;
+      opacity: 0;
     }
   }
 
