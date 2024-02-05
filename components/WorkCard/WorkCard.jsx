@@ -29,7 +29,7 @@ const icons = {
   sass: <DiSass />,
   animation: <MdAnimation />,
   js: <DiJavascript1 />,
-  bootstarp: <BsFillBootstrapFill />,
+  bootstrap: <BsFillBootstrapFill />,
   less: <FaLess />,
   material: <SiMui />,
   graphql: <SiApollographql />,
@@ -75,9 +75,9 @@ export default function WorkCard({ workItem }) {
             <BsGithub />
           </a>
         )}
-        <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
+       {web_link && <a onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer" href={web_link}>
           <AiOutlineGlobal />
-        </a>
+        </a>}
       </span>
     </Box>
   );
