@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
 import Link from 'next/link';
+import React, { useContext } from 'react';
 // language
 import { LanguageContext } from '../../pages/_app';
 // style
-import { Box, TextBox, SubBox } from './introStyle';
 import { motion } from 'framer-motion';
-import { MdDoubleArrow } from 'react-icons/md';
+import { CiGlobe } from "react-icons/ci";
 import { IoMdArrowBack } from 'react-icons/io';
+import { MdDoubleArrow } from 'react-icons/md';
+import { Box, ButtonsContainer, SubBox, TextBox } from './introStyle';
+
 
 const Text = {
   he: {
@@ -14,18 +16,20 @@ const Text = {
     main: 'אני יוסף',
     p: 'אני מפתח פול סטאק, מעצב ובונה אתרים, צלם חובב וגרפיקאי',
     myWorkLink: 'תיק עבודות',
+    personalWeb: 'בלוג'
   },
   en: {
     head: 'Hi,',
     main: "I'm Yosefus.",
-    p: 'I am a full stack developer, graphic designer, photographer, and web developer.',
-    myWorkLink: 'my portfolio',
+    p: 'I am a full stack developer, graphic designer, and photographer.',
+    myWorkLink: 'portfolio',
+    personalWeb: 'blog'
   },
 };
 
 export default function Intro({ click }) {
   const [lang] = useContext(LanguageContext);
-  const { head, main, p, myWorkLink } = Text[lang];
+  const { head, main, p, myWorkLink, personalWeb } = Text[lang];
 
   return (
     <Box
@@ -38,12 +42,18 @@ export default function Intro({ click }) {
           <h1>{head}</h1>
           <h3>{main}</h3>
           <h6>{p}</h6>
-          <Link href="/work">
-            <a className="linkPort">
-              {myWorkLink}
-              <span>{lang === 'en' ? <MdDoubleArrow /> : <IoMdArrowBack />}</span>
+          <ButtonsContainer>
+            <Link href="/work">
+              <a className="linkPort">
+                {myWorkLink}
+                <span>{lang === 'en' ? <MdDoubleArrow /> : <IoMdArrowBack />}</span>
+              </a>
+            </Link>
+            <a className='link' href="https://yosefus-flavius.com" target="_blank">
+              {personalWeb}
+              <CiGlobe />
             </a>
-          </Link>
+          </ButtonsContainer>
         </TextBox>
       </SubBox>
       <SubBox>

@@ -34,7 +34,7 @@ export const Box = styled(motion.li)`
     background: ${(props) => props.theme.body};
     box-shadow: 3px 3px 15px ${(props) => props.theme.text};
     transition: all 0.2s ease-in-out;
-  color: ${(props) => props.theme.text};
+    color: ${(props) => props.theme.text};
     transform: translateY(50%);
 
     svg{

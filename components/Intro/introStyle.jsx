@@ -130,4 +130,30 @@ const SubBox = styled.div`
   }
 `;
 
-export { Box, TextBox, SubBox };
+const ButtonsContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${(props) => props.theme.text};
+    background: ${(props) => props.theme.body};
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 0%.5rem;
+
+    svg{
+      width: 25px;
+    }
+  }
+  `
+
+export { Box, TextBox, SubBox , ButtonsContainer};
+
