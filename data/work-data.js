@@ -30,7 +30,7 @@ const arrWork = [
       description: 'A simple but elegant game of tic tac toe',
       note: 'Includes additions of adding player names, back step back and game reset',
     },
-    tec: ['html', 'css', 'react', 'bootstarp', 'animation'],
+    tec: ['html', 'css', 'react', 'bootstrap', 'animation'],
     sort_path: ['frontend', 'react'],
     web_link: 'https://tic-tac-toe-react-yosefus.netlify.app',
     git_link: 'https://github.com/yosefus/tic-tac-toe-react',
@@ -183,7 +183,7 @@ const arrWork = [
   //     description: 'with option to add delete and update a movie when connected as an admin',
   //     note: 'with search sort by and order by options',
   //   },
-  //   tec: ['react', 'mongo', 'express', 'bootstarp', 'node'],
+  //   tec: ['react', 'mongo', 'express', 'bootstrap', 'node'],
   //   sort_path: ['frontend', 'backend'],
   //   web_link: 'https://trying-again-and-again.herokuapp.com',
   //   git_link: 'https://github.com/yosefus/moviesapp',
@@ -221,7 +221,7 @@ const arrWork = [
       description: 'game with only vanila js html css and bootstrap',
       note: 'with score, reset game, choose the number of the card on the board and more',
     },
-    tec: ['html', 'css', 'js', 'bootstarp'],
+    tec: ['html', 'css', 'js', 'bootstrap'],
     sort_path: ['frontend'],
     web_link: 'https://memory-game-js-yosefus.netlify.app/',
     git_link: 'https://github.com/yosefus/memory-game',
@@ -297,7 +297,7 @@ const arrWork = [
       description: 'A site for listening to and saving music - including logging in, saving playlists, searching YouTube, and more',
       note: 'build with Next.js TypeScript and Scss ',
     },
-    tec: ['next', 'sass', "ts", "mongo", "bootstarp"],
+    tec: ['next', 'sass', "ts", "mongo", "bootstrap"],
     sort_path: ['frontend', 'backend'],
     web_link: 'https://spotlify-yosefus.netlify.app/',
     git_link: '',
@@ -336,7 +336,7 @@ const arrWork = [
       note: 'with order dishes, handle progress, and more',
 
     },
-    tec: ['react', 'bootstarp', 'sass', 'animation',],
+    tec: ['react', 'bootstrap', 'sass', 'animation',],
     sort_path: ['frontend'],
     web_link: 'https://snazzy-restaurant.netlify.app/',
     img_path: '/images/rest.jpg',
@@ -401,6 +401,25 @@ const arrWork = [
     img_path: '/images/carnaim.jpg',
     difficulty: 'hard',
     git_link: ''
+  },
+  {
+    name: 'chuck norris jokes',
+    he: {
+      title: "בדיחות צ'אק נוריס",
+      description: 'אתר להראות שימוש קליל בhtmx',
+      note: 'משיכת נתונים מהשרת ללא js בכלל בצד הלקוח',
+    },
+    en: {
+      title: "Chuck Norris Jokes",
+      description: "A website to showcase the lightweight use of htmx",
+      note: "Fetch data from the server without any client-side JavaScript",
+    },
+    tec: ['html', 'bootstrap', 'node', 'express' ],
+    sort_path: ['frontend', 'backend'],
+    web_link: '',
+    img_path: '/images/htmx.jpg',
+    difficulty: 'easy',
+    git_link: 'https://github.com/yosefus/htmx-starter-jokes'
   },
 ];
 
